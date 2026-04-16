@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moral Weights Explorer</title>
+<title>How Can You Help Others?</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://d3js.org/topojson.v3.min.js"></script>
 <style>
@@ -25,9 +25,15 @@ body {
   background: var(--bg); color: var(--text); line-height: 1.5;
 }
 .app { max-width: 1600px; margin: 0 auto; padding: 20px 24px 60px; }
-header { margin-bottom: 20px; }
-header h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 2px; }
-header p { color: var(--text-dim); font-size: 13px; }
+header { margin-bottom: 24px; }
+header h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
+.intro {
+  font-size: 14px; color: var(--text-dim); line-height: 1.6; max-width: 680px;
+  margin-bottom: 8px;
+}
+.intro a, header a { color: var(--text-dim); text-decoration: underline; text-underline-offset: 2px; }
+.intro a:hover, header a:hover { color: var(--text); }
+header .subtitle { color: var(--text-dim); font-size: 12px; margin-top: 4px; }
 
 .controls { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
 .toggle-bar {
@@ -214,8 +220,9 @@ header p { color: var(--text-dim); font-size: 13px; }
 <body>
 <div class="app">
   <header>
-    <h1>Moral Weights Explorer</h1>
-    <p>What does a $1M donation achieve? Click any cell to explore.</p>
+    <h1>How can you help others?</h1>
+    <p class="intro">There are many ways to do good. Some programs have especially strong evidence behind them and can have a very high impact per dollar — meaning each dollar goes further in saving lives or improving well-being. Below are interventions whose benefits have been carefully studied. Click any cell to explore what a $1M donation achieves.</p>
+    <p class="subtitle">Data from <a href="https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness/cost-effectiveness-models" target="_blank">GiveWell's cost-effectiveness models</a></p>
   </header>
 
   <div class="controls">
@@ -281,7 +288,7 @@ header p { color: var(--text-dim); font-size: 13px; }
 
   <div class="tooltip" id="tooltip"></div>
   <div class="footer">
-    Data from <a href="https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness/cost-effectiveness-models" target="_blank">GiveWell's cost-effectiveness models</a>. Educational tool, not financial advice.
+    Educational viewer based on data from <a href="https://www.givewell.org/" target="_blank">GiveWell</a>. The presentation and analysis reflect the author's interpretation and are not affiliated with or endorsed by GiveWell.
   </div>
 </div>
 
