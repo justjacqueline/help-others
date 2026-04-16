@@ -162,6 +162,10 @@ header .subtitle { color: var(--text-dim); font-size: 12px; margin-top: 4px; }
   font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px;
   color: var(--text-dim); font-weight: 600; margin-bottom: 8px;
 }
+.d-card-title .big-num {
+  font-size: 22px; font-weight: 800; letter-spacing: -0.5px;
+  color: var(--text); text-transform: none;
+}
 
 .impact-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px; }
 .impact-num { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; line-height: 1; color: var(--text); }
@@ -561,11 +565,11 @@ function renderDetail(p) {
 
   const o = p.outcomes;
   const totalLives = Math.round(o.mortalitiesUnder5 + o.mortalitiesOver5 + o.mortalities5to14 + o.mortalities15to49 + o.mortalities50to74);
-  document.getElementById('d-lives-title').textContent = totalLives > 0
-    ? `${totalLives.toLocaleString()} lives saved per $1M`
+  document.getElementById('d-lives-title').innerHTML = totalLives > 0
+    ? `<span class="big-num">${totalLives.toLocaleString()}</span> lives saved per $1M`
     : 'Lives saved per $1M';
-  document.getElementById('d-econ-title').textContent =
-    `${Math.round(o.consumptionIncrease).toLocaleString()} economic impact per $1M`;
+  document.getElementById('d-econ-title').innerHTML =
+    `<span class="big-num">${Math.round(o.consumptionIncrease).toLocaleString()}</span> lifetime consumption increase per $1M <span style="font-size:8px;text-transform:none;font-weight:400;">measured in ln($)</span>`;
 
   renderLives(p);
   renderEcon(p);
