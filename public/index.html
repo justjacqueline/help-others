@@ -233,7 +233,7 @@ header .subtitle { color: var(--text-dim); font-size: 12px; margin-top: 4px; }
 <div class="app">
   <header>
     <h1>How can you help others?</h1>
-    <p class="intro">There are many ways to do good. Some programs have especially strong evidence behind them and can have a very high impact per dollar — meaning each dollar goes further in saving lives or improving well-being. Below are interventions whose benefits have been carefully studied. Click any cell to explore what a $1M donation achieves.</p>
+    <p class="intro">There are many ways to do good. Some programs have especially strong evidence behind them and can have a very high impact per dollar — meaning each dollar goes further in saving lives or improving well-being. This tool explores four charities recommended by GiveWell, showing how the same donation can achieve very different outcomes depending on where and how it's used (and these are already well-studied global health programs). Click any cell to explore what a $1M donation achieves.</p>
     <p class="subtitle">Data from <a href="https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness/cost-effectiveness-models" target="_blank">GiveWell's cost-effectiveness models</a></p>
   </header>
 
@@ -310,11 +310,11 @@ const FULL_NAMES = {
   AMF: 'Against Malaria Foundation', MC: 'Malaria Consortium',
   HKI: 'Helen Keller Intl', NI: 'New Incentives'
 };
-const DESCS = {
-  'Against Malaria Foundation': 'Distributes long-lasting insecticide-treated bed nets to prevent malaria, one of the most cost-effective ways to prevent malaria deaths in children under 5.',
-  'Malaria Consortium': 'Runs seasonal malaria chemoprevention programs, giving preventive antimalarial drugs to children during peak malaria season.',
-  'Helen Keller International': 'Provides Vitamin A supplementation to children ages 6-59 months. Supplementation reduces child mortality by roughly 12-24%.',
-  'New Incentives': 'Provides conditional cash transfers to incentivize routine childhood vaccinations in Nigeria.'
+const CHARITY_LINKS = {
+  'Against Malaria Foundation': 'https://www.givewell.org/charities/against-malaria-foundation',
+  'Malaria Consortium': 'https://www.givewell.org/charities/malaria-consortium',
+  'Helen Keller International': 'https://www.givewell.org/charities/helen-keller-international',
+  'New Incentives': 'https://www.givewell.org/charities/new-incentives'
 };
 const ISO_NUM = {
   'Chad':'148','DRC':'180','Guinea':'324','Nigeria':'566','South Sudan':'728',
@@ -656,9 +656,10 @@ function renderMap(p) {
 }
 
 function renderAbout(p) {
-  document.getElementById('d-about').innerHTML = `
-    <h4 style="font-size:12px;font-weight:600;margin-bottom:4px;">${p.charity}</h4>
-    <p style="font-size:11px;color:var(--text-dim);line-height:1.4;">${DESCS[p.charity] || ''}</p>`;
+  const link = CHARITY_LINKS[p.charity] || '';
+  document.getElementById('d-about').innerHTML = link
+    ? `<a href="${link}" target="_blank" rel="noopener" style="font-size:11px;color:var(--text-dim);text-decoration:underline;">Read about ${p.charity} on GiveWell →</a>`
+    : '';
 }
 
 function changeSort(v) { sortBy = v; renderTopBar(); }
