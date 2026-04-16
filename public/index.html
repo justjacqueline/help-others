@@ -16,268 +16,226 @@
   --text-dim: #8b90a0;
   --accent: #6c8cff;
   --accent-dim: #4a5a99;
-  --green: #4ade80;
-  --amber: #fbbf24;
-  --charity-amf: #ef6c6c;
-  --charity-mc: #6cb4ef;
-  --charity-hki: #6cef9d;
-  --charity-ni: #efcf6c;
   --radius: 10px;
   --radius-sm: 6px;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
+  background: var(--bg); color: var(--text); line-height: 1.5;
 }
+.app { max-width: 1600px; margin: 0 auto; padding: 20px 24px 60px; }
+header { margin-bottom: 20px; }
+header h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 2px; }
+header p { color: var(--text-dim); font-size: 13px; }
 
-.app { max-width: 1400px; margin: 0 auto; padding: 24px 28px 60px; }
-
-header { margin-bottom: 28px; }
-header h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; }
-header p { color: var(--text-dim); font-size: 14px; max-width: 600px; }
-
-/* Toggle bar */
+.controls { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
 .toggle-bar {
-  display: flex; gap: 4px; background: var(--surface); padding: 4px;
-  border-radius: var(--radius); width: fit-content; margin-bottom: 20px;
+  display: flex; gap: 3px; background: var(--surface); padding: 3px;
+  border-radius: var(--radius-sm); width: fit-content;
 }
 .toggle-btn {
-  padding: 7px 18px; border: none; background: transparent; color: var(--text-dim);
-  font-size: 13px; font-weight: 500; cursor: pointer; border-radius: var(--radius-sm);
+  padding: 5px 14px; border: none; background: transparent; color: var(--text-dim);
+  font-size: 12px; font-weight: 500; cursor: pointer; border-radius: 4px;
   transition: all 0.2s; white-space: nowrap;
 }
 .toggle-btn:hover { color: var(--text); }
 .toggle-btn.active { background: var(--accent); color: #fff; }
 .toggle-btn.disabled { opacity: 0.35; cursor: not-allowed; }
 
-/* Charity filters */
-.charity-filters {
-  display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap;
+/* Top bar */
+.top-bar {
+  background: var(--surface); border-radius: var(--radius); padding: 8px 14px;
+  margin-bottom: 16px; display: flex; align-items: center; gap: 6px;
+  overflow-x: auto;
 }
-.cf-btn {
-  padding: 5px 12px; border: 1px solid var(--border); background: transparent;
-  color: var(--text-dim); font-size: 12px; font-weight: 500; cursor: pointer;
-  border-radius: var(--radius-sm); transition: all 0.2s;
+.top-bar::-webkit-scrollbar { height: 4px; }
+.top-bar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+.top-bar-label { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+.top-bar select {
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+  padding: 2px 6px; border-radius: 4px; font-size: 10px; flex-shrink: 0;
 }
-.cf-btn:hover { border-color: var(--text-dim); color: var(--text); }
-.cf-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(108,140,255,0.1); }
+.top-item {
+  cursor: pointer; padding: 3px 8px; border-radius: 4px;
+  white-space: nowrap; flex-shrink: 0; transition: background 0.12s;
+  font-size: 11px; color: var(--text-dim);
+}
+.top-item:hover { background: var(--surface2); color: var(--text); }
+.top-item.selected { outline: 2px solid #fff; background: var(--surface2); color: var(--text); }
+.top-rank { font-weight: 600; margin-right: 3px; }
 
-/* Two-panel layout */
-.panels {
+/* Main: heatmap left + detail right */
+.main-split {
   display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 20px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 16px;
   align-items: start;
 }
-@media (max-width: 960px) { .panels { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .main-split { grid-template-columns: 1fr; } }
 
-/* Heatmap */
 .heatmap-panel {
-  background: var(--surface); border-radius: var(--radius); padding: 16px;
+  background: var(--surface); border-radius: var(--radius); padding: 12px;
   overflow-x: auto;
 }
 .hm-section-title {
-  font-size: 11px; color: var(--text-dim); text-transform: uppercase;
-  letter-spacing: 0.5px; font-weight: 600; margin-bottom: 10px;
-}
-
-.hm-grid {
-  display: grid;
-  gap: 3px;
-}
-
-.hm-header {
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 6px;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.hm-row-label {
-  font-size: 11px;
-  color: var(--text-dim);
-  padding: 4px 8px 4px 0;
-  text-align: right;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.hm-cell {
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.15s;
-  min-height: 30px;
-  position: relative;
-}
-.hm-cell:hover { transform: scale(1.08); z-index: 2; }
-.hm-cell.selected { outline: 2px solid #fff; outline-offset: -1px; z-index: 3; }
-.hm-cell.empty { background: transparent; cursor: default; }
-.hm-cell.empty:hover { transform: none; }
-
-.hm-legend {
-  display: flex; align-items: center; gap: 8px; margin-top: 10px;
-  font-size: 11px; color: var(--text-dim);
-}
-.hm-legend-bar { height: 8px; width: 120px; border-radius: 4px; }
-
-/* Leaderboard */
-.lb-panel {
-  background: var(--surface); border-radius: var(--radius); padding: 16px;
-  max-height: 90vh; overflow-y: auto; position: sticky; top: 12px;
-}
-.lb-panel::-webkit-scrollbar { width: 5px; }
-.lb-panel::-webkit-scrollbar-track { background: transparent; }
-.lb-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-
-.lb-title {
-  font-size: 11px; color: var(--text-dim); text-transform: uppercase;
+  font-size: 10px; color: var(--text-dim); text-transform: uppercase;
   letter-spacing: 0.5px; font-weight: 600; margin-bottom: 8px;
 }
 
-.lb-sort { display: flex; gap: 6px; margin-bottom: 10px; align-items: center; }
-.lb-sort label { font-size: 11px; color: var(--text-dim); }
-.lb-sort select {
-  background: var(--surface2); border: 1px solid var(--border); color: var(--text);
-  padding: 3px 6px; border-radius: var(--radius-sm); font-size: 11px;
+/* Heatmap table */
+.hm-table {
+  border-collapse: separate;
+  border-spacing: 2px;
+  table-layout: fixed;
+  width: 100%;
+}
+.hm-table th {
+  font-size: 10px; font-weight: 600; color: var(--text-dim); padding: 4px 2px; text-align: center;
+  position: sticky; top: 0; background: var(--surface); z-index: 4;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.hm-table .col-label { width: 110px; min-width: 90px; }
+.hm-table .col-charity { width: calc((100% - 110px) / 4); }
+
+.hm-row-label {
+  font-size: 10px; color: var(--text-dim); padding: 2px 6px 2px 0;
+  text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  vertical-align: middle;
+}
+.hm-cell {
+  border-radius: 3px; text-align: center; padding: 3px 2px; cursor: pointer;
+  font-size: 10px; font-weight: 700; transition: all 0.12s; vertical-align: middle;
+}
+.hm-cell:hover { outline: 1px solid rgba(255,255,255,0.5); z-index: 2; }
+.hm-cell.selected { outline: 2px solid #fff; z-index: 3; }
+.hm-empty { text-align: center; padding: 3px 2px; color: var(--border); font-size: 9px; vertical-align: middle; }
+
+.hm-section-row td {
+  padding: 8px 0 3px; font-size: 11px; font-weight: 700; color: var(--text);
+  border-top: 1px solid var(--border);
+}
+.hm-divider td { border-top: 1px solid var(--border); }
+
+.hm-legend {
+  display: flex; align-items: center; gap: 6px; margin-top: 8px;
+  font-size: 10px; color: var(--text-dim);
+}
+.hm-legend-bar { height: 6px; width: 100px; border-radius: 3px; }
+
+/* Detail side panel */
+.detail-side {
+  background: var(--surface); border-radius: var(--radius); padding: 20px;
+  position: sticky; top: 12px;
 }
 
-.lb-item {
-  display: flex; align-items: center; gap: 8px;
-  padding: 6px 8px; border-radius: var(--radius-sm); cursor: pointer;
-  transition: background 0.12s; margin-bottom: 1px;
+.detail-side .d-head {
+  margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border);
 }
-.lb-item:hover { background: var(--surface2); }
-.lb-item.selected { background: var(--accent-dim); }
-
-.lb-rank { font-size: 11px; font-weight: 700; color: var(--text-dim); width: 20px; text-align: right; flex-shrink: 0; }
-.lb-item:nth-child(-n+3) .lb-rank { color: var(--amber); }
-.lb-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.lb-info { flex: 1; min-width: 0; }
-.lb-name { font-size: 12px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.lb-charity { font-size: 10px; color: var(--text-dim); }
-.lb-score { font-size: 13px; font-weight: 700; flex-shrink: 0; }
-
-/* Detail panel */
-.detail {
-  background: var(--surface); border-radius: var(--radius); padding: 24px;
-  margin-top: 20px; display: none;
+.d-head-row {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
 }
-.detail.visible { display: block; }
-
-.detail-head {
-  display: flex; align-items: flex-start; justify-content: space-between;
-  margin-bottom: 20px; gap: 16px; flex-wrap: wrap;
+.detail-side .d-title { font-size: 17px; font-weight: 700; letter-spacing: -0.3px; line-height: 1.3; flex: 1; }
+.d-score { text-align: right; flex-shrink: 0; }
+.d-score-num { font-size: 22px; font-weight: 800; display: block; line-height: 1; }
+.d-score-label { font-size: 9px; color: var(--text-dim); display: block; margin-top: 2px; }
+.detail-side .d-card {
+  background: var(--surface2); border-radius: var(--radius-sm); padding: 14px;
+  margin-bottom: 10px;
 }
-.detail-title { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
-.detail-sub { font-size: 13px; color: var(--text-dim); margin-top: 2px; }
-.detail-badge {
-  background: var(--accent); color: #fff; font-size: 18px; font-weight: 800;
-  padding: 6px 14px; border-radius: var(--radius); white-space: nowrap;
+.detail-side .d-card.d-card-lives { height: 160px; overflow: hidden; }
+.detail-side .d-card-title {
+  font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--text-dim); font-weight: 600; margin-bottom: 8px;
 }
 
-.detail-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+.impact-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px; }
+.impact-num { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; line-height: 1; color: var(--text); }
+.impact-lbl { font-size: 11px; color: var(--text-dim); }
+
+.bar-wrap { margin: 6px 0; }
+.bar-bg { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 2px; transition: width 0.5s ease; background: var(--text-dim); }
+.bar-label { font-size: 9px; color: var(--text-dim); margin-top: 2px; }
+
+.dot-field { display: flex; flex-wrap: wrap; gap: 1px; margin: 6px 0; align-items: flex-end; }
+.dot-group {
+  display: contents; cursor: default; position: relative;
 }
-@media (max-width: 900px) { .detail-grid { grid-template-columns: 1fr; } }
-
-.detail-card {
-  background: var(--surface2); border-radius: var(--radius); padding: 16px;
+.dot-group-wrap {
+  display: inline-flex; flex-wrap: wrap; gap: 1px; align-items: flex-end;
+  position: relative; padding: 2px; border-radius: 3px;
+  transition: background 0.15s;
 }
-.detail-card-title {
-  font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
-  color: var(--text-dim); font-weight: 600; margin-bottom: 12px;
+.dot-group-wrap:hover { background: rgba(255,255,255,0.06); }
+.dot-group-wrap:hover .dot-label { opacity: 1; transform: translateX(-50%) translateY(0); }
+.dot-label {
+  position: absolute; bottom: calc(100% + 4px); left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--bg); border: 1px solid var(--border); border-radius: 4px;
+  padding: 2px 8px; font-size: 10px; white-space: nowrap; pointer-events: none;
+  opacity: 0; transition: opacity 0.15s, transform 0.15s; z-index: 10;
 }
-
-.impact-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
-.impact-num { font-size: 28px; font-weight: 800; letter-spacing: -1px; line-height: 1; }
-.impact-lbl { font-size: 13px; color: var(--text-dim); }
-
-.bar-wrap { margin: 6px 0 12px; }
-.bar-bg { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
-.bar-fill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
-.bar-label { font-size: 10px; color: var(--text-dim); margin-top: 2px; }
-
-.dots { display: flex; flex-wrap: wrap; gap: 1.5px; margin: 4px 0 12px; }
-.dot { width: 3px; height: 3px; border-radius: 50%; }
-.dot-u5 { background: var(--green); }
-.dot-o5 { background: var(--accent); }
+.dot {
+  border-radius: 50%; background: var(--text); opacity: 0.7;
+}
+.dot-legend {
+  display: flex; gap: 10px; margin-top: 6px; font-size: 9px; color: var(--text-dim);
+  align-items: center;
+}
+.dot-legend-item { display: flex; align-items: center; gap: 3px; }
 
 .map-country { fill: var(--surface); stroke: var(--border); stroke-width: 0.5; transition: fill 0.3s; }
 .map-country.highlighted { fill: var(--accent); stroke: var(--accent); stroke-width: 1.5; }
 .map-country.has-programs { fill: var(--surface2); }
 
-.charity-tag {
-  display: inline-block; padding: 1px 7px; border-radius: 4px;
-  font-size: 11px; font-weight: 600;
+.prompt-msg {
+  text-align: center; color: var(--text-dim); padding: 60px 20px; font-size: 13px;
 }
-.charity-tag-amf { background: rgba(239,108,108,0.15); color: var(--charity-amf); }
-.charity-tag-mc { background: rgba(108,180,239,0.15); color: var(--charity-mc); }
-.charity-tag-hki { background: rgba(108,239,157,0.15); color: var(--charity-hki); }
-.charity-tag-ni { background: rgba(239,207,108,0.15); color: var(--charity-ni); }
-
-.prompt-box {
-  text-align: center; color: var(--text-dim); padding: 32px 16px; font-size: 13px;
-}
-.prompt-box .arrow { font-size: 24px; display: block; margin-bottom: 6px; }
-
 .footer {
-  margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);
-  font-size: 11px; color: var(--text-dim); text-align: center;
+  margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border);
+  font-size: 10px; color: var(--text-dim); text-align: center;
 }
 .footer a { color: var(--accent); text-decoration: none; }
-.footer a:hover { text-decoration: underline; }
 
 .tooltip {
   position: fixed; pointer-events: none; z-index: 100;
   background: rgba(26,29,39,0.95); border: 1px solid var(--border);
-  border-radius: var(--radius-sm); padding: 8px 12px;
-  font-size: 12px; max-width: 220px; display: none;
+  border-radius: var(--radius-sm); padding: 6px 10px;
+  font-size: 11px; max-width: 200px; display: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 .tooltip.show { display: block; }
-.tooltip-name { font-weight: 600; margin-bottom: 2px; }
-.tooltip-charity { color: var(--text-dim); font-size: 11px; }
-.tooltip-val { font-weight: 700; font-size: 14px; margin-top: 4px; }
+.tooltip-name { font-weight: 600; margin-bottom: 1px; }
+.tooltip-charity { color: var(--text-dim); font-size: 10px; }
+.tooltip-val { font-weight: 700; font-size: 13px; margin-top: 3px; }
 </style>
 </head>
 <body>
-
 <div class="app">
   <header>
     <h1>Moral Weights Explorer</h1>
-    <p>See what a $1M donation achieves across GiveWell's top charity programs. Click any cell or row to explore.</p>
+    <p>What does a $1M donation achieve? Click any cell to explore.</p>
   </header>
 
-  <div class="toggle-bar">
-    <button class="toggle-btn active" onclick="setMode('givewell')">GiveWell's Weights</button>
-    <button class="toggle-btn disabled" title="Coming soon">Your Weights</button>
-    <button class="toggle-btn disabled" title="Coming soon">Compare</button>
+  <div class="controls">
+    <div class="toggle-bar">
+      <button class="toggle-btn active" onclick="setMode('givewell')">GiveWell's Weights</button>
+      <button class="toggle-btn disabled" title="Coming soon">Your Weights</button>
+      <button class="toggle-btn disabled" title="Coming soon">Compare</button>
+    </div>
   </div>
 
-  <div class="charity-filters" id="charity-filters">
-    <button class="cf-btn active" data-c="all" onclick="filterCharity('all')">All</button>
-    <button class="cf-btn" data-c="AMF" onclick="filterCharity('AMF')">AMF</button>
-    <button class="cf-btn" data-c="MC" onclick="filterCharity('MC')">MC</button>
-    <button class="cf-btn" data-c="HKI" onclick="filterCharity('HKI')">HKI</button>
-    <button class="cf-btn" data-c="NI" onclick="filterCharity('NI')">NI</button>
+  <div class="top-bar" id="top-bar">
+    <span class="top-bar-label">Top programs</span>
+    <select onchange="changeSort(this.value)" style="margin-right:4px;">
+      <option value="effectiveness">by effectiveness</option>
+      <option value="lives">by lives saved</option>
+      <option value="consumption">by economic impact</option>
+    </select>
   </div>
 
-  <div class="panels">
+  <div class="main-split">
     <div class="heatmap-panel">
       <div class="hm-section-title">Cost-effectiveness (x times better than cash)</div>
       <div id="heatmap"></div>
@@ -287,79 +245,64 @@ header p { color: var(--text-dim); font-size: 14px; max-width: 600px; }
         <span>59x</span>
       </div>
     </div>
-    <div class="lb-panel">
-      <div class="lb-title">Ranked</div>
-      <div class="lb-sort">
-        <label>by</label>
-        <select id="sort-select" onchange="changeSort(this.value)">
-          <option value="effectiveness">Effectiveness</option>
-          <option value="lives">Lives saved</option>
-          <option value="consumption">Economic impact</option>
-        </select>
+    <div class="detail-side" id="detail-side">
+      <div id="prompt-msg" class="prompt-msg">
+        Click any cell in the heatmap or any program in the top bar to see what $1M achieves.
       </div>
-      <div id="lb-list"></div>
-    </div>
-  </div>
-
-  <div class="detail visible" id="prompt-panel">
-    <div class="prompt-box">
-      <span class="arrow">&uarr;</span>
-      Click any cell or leaderboard row to explore what $1M achieves.
-    </div>
-  </div>
-
-  <div class="detail" id="detail-panel">
-    <div class="detail-head">
-      <div>
-        <div class="detail-title" id="d-title"></div>
-        <div class="detail-sub" id="d-sub"></div>
-      </div>
-      <div class="detail-badge" id="d-badge"></div>
-    </div>
-    <div class="detail-grid">
-      <div class="detail-card">
-        <div class="detail-card-title">Lives saved per $1M donation</div>
-        <div id="d-lives"></div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-card-title">Economic impact per $1M</div>
-        <div id="d-econ"></div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-card-title">Location</div>
-        <div id="d-map"></div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-card-title">About this charity</div>
-        <div id="d-about"></div>
+      <div id="detail-content" style="display:none;">
+        <div class="d-head">
+          <div class="d-head-row">
+            <div class="d-title" id="d-title"></div>
+            <div class="d-score">
+              <span class="d-score-num" id="d-score-num"></span>
+              <span class="d-score-label">times as cost-effective<br>as cash transfers</span>
+            </div>
+          </div>
+        </div>
+        <div class="d-card d-card-lives">
+          <div class="d-card-title" id="d-lives-title">Lives saved per $1M</div>
+          <div id="d-lives"></div>
+        </div>
+        <div class="d-card">
+          <div class="d-card-title" id="d-econ-title">Economic impact per $1M</div>
+          <div id="d-econ"></div>
+        </div>
+        <div class="d-card">
+          <div class="d-card-title">Location</div>
+          <div id="d-map"></div>
+        </div>
+        <div class="d-card">
+          <div class="d-card-title">About this charity</div>
+          <div id="d-about"></div>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="tooltip" id="tooltip"></div>
-
   <div class="footer">
-    Data from <a href="https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness/cost-effectiveness-models" target="_blank">GiveWell's cost-effectiveness models</a>. This is an educational tool, not financial advice.
+    Data from <a href="https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness/cost-effectiveness-models" target="_blank">GiveWell's cost-effectiveness models</a>. Educational tool, not financial advice.
   </div>
 </div>
 
 <script>
 const CC = { AMF:'#ef6c6c', MC:'#6cb4ef', HKI:'#6cef9d', NI:'#efcf6c' };
-
-const DESCS = {
-  'Against Malaria Foundation': 'Distributes long-lasting insecticide-treated bed nets to prevent malaria. Bed nets are among the most cost-effective ways to prevent malaria deaths, particularly in children under 5.',
-  'Malaria Consortium': 'Runs seasonal malaria chemoprevention programs, giving preventive antimalarial drugs to children during peak malaria season.',
-  'Helen Keller International': 'Provides Vitamin A supplementation to children ages 6-59 months. Vitamin A deficiency weakens immune systems; supplementation reduces child mortality by roughly 12-24%.',
-  'New Incentives': 'Provides conditional cash transfers to incentivize routine childhood vaccinations in Nigeria. Small cash payments to caregivers significantly increase vaccination rates.'
+const FULL_NAMES = {
+  AMF: 'Against Malaria Foundation', MC: 'Malaria Consortium',
+  HKI: 'Helen Keller Intl', NI: 'New Incentives'
 };
-
+const DESCS = {
+  'Against Malaria Foundation': 'Distributes long-lasting insecticide-treated bed nets to prevent malaria, one of the most cost-effective ways to prevent malaria deaths in children under 5.',
+  'Malaria Consortium': 'Runs seasonal malaria chemoprevention programs, giving preventive antimalarial drugs to children during peak malaria season.',
+  'Helen Keller International': 'Provides Vitamin A supplementation to children ages 6-59 months. Supplementation reduces child mortality by roughly 12-24%.',
+  'New Incentives': 'Provides conditional cash transfers to incentivize routine childhood vaccinations in Nigeria.'
+};
 const ISO_NUM = {
   'Chad':'148','DRC':'180','Guinea':'324','Nigeria':'566','South Sudan':'728',
   'Togo':'768','Uganda':'800','Burkina Faso':'854','Mozambique':'508',
   'Cameroon':'120',"Côte d'Ivoire":'384','Kenya':'404','Madagascar':'450',
   'Mali':'466','Niger':'562'
 };
-
 const AFRICA_IDS = [
   '012','024','204','072','108','120','132','140','148','174','178','180',
   '262','818','226','232','231','266','270','288','324','624','384','404',
@@ -368,61 +311,58 @@ const AFRICA_IDS = [
   '768','788','800','834','854','894','732'
 ];
 
-let DATA, sel = null, charFilter = 'all', sortBy = 'effectiveness', geoData;
-
-// Geographic ordering: north-to-south sweep across Africa, then Nigerian states by region
 const GEO_ORDER = [
-  // Sahel (west to east)
-  'Niger', 'Mali', 'Burkina Faso', 'Chad',
-  // West Africa coast (west to east)
-  'Guinea', "Côte d'Ivoire", 'Togo',
-  // Nigeria country-level (AMF entries)
-  'Nigeria||GF states', 'Nigeria||PMI states',
-  // Nigeria — Northwest
-  'Nigeria||Sokoto', 'Nigeria||Zamfara', 'Nigeria||Kebbi', 'Nigeria||Katsina',
-  'Nigeria||Kano', 'Nigeria||Kaduna', 'Nigeria||Jigawa',
-  // Nigeria — Northeast
-  'Nigeria||Borno', 'Nigeria||Yobe', 'Nigeria||Gombe', 'Nigeria||Bauchi',
-  'Nigeria||Adamawa', 'Nigeria||Taraba',
-  // Nigeria — North-Central
-  'Nigeria||Niger', 'Nigeria||FCT (Abuja)', 'Nigeria||FCT',
-  'Nigeria||Nasarawa', 'Nigeria||Plateau', 'Nigeria||Kogi', 'Nigeria||Kwara', 'Nigeria||Benue',
-  // Nigeria — Southwest
-  'Nigeria||Oyo', 'Nigeria||Ogun', 'Nigeria||Lagos', 'Nigeria||Osun', 'Nigeria||Ondo', 'Nigeria||Ekiti',
-  // Nigeria — South-South & Southeast
-  'Nigeria||Edo', 'Nigeria||Delta', 'Nigeria||Rivers', 'Nigeria||Bayelsa',
-  'Nigeria||Anambra', 'Nigeria||Imo', 'Nigeria||Enugu', 'Nigeria||Ebonyi',
-  'Nigeria||Abia', 'Nigeria||Cross River', 'Nigeria||Akwa Ibom',
-  // Central Africa
-  'Cameroon', 'DRC',
-  'DRC||Tanganyika', 'DRC||Haut-Lomami', 'DRC||Lualaba', 'DRC||Haut-Katanga',
-  // East Africa (north to south)
-  'South Sudan', 'Uganda', 'Uganda||Karamoja', 'Kenya',
-  // Southeast Africa
-  'Mozambique', 'Mozambique||Nampula', 'Madagascar'
+  'Niger','Mali','Burkina Faso','Chad',
+  'Guinea',"Côte d'Ivoire",'Togo',
+  'Nigeria||GF states','Nigeria||PMI states',
+  'Nigeria||Sokoto','Nigeria||Zamfara','Nigeria||Kebbi','Nigeria||Katsina',
+  'Nigeria||Kano','Nigeria||Kaduna','Nigeria||Jigawa',
+  'Nigeria||Borno','Nigeria||Yobe','Nigeria||Gombe','Nigeria||Bauchi',
+  'Nigeria||Adamawa','Nigeria||Taraba',
+  'Nigeria||Niger','Nigeria||FCT (Abuja)','Nigeria||FCT',
+  'Nigeria||Nasarawa','Nigeria||Plateau','Nigeria||Kogi','Nigeria||Kwara','Nigeria||Benue',
+  'Nigeria||Oyo','Nigeria||Ogun','Nigeria||Lagos','Nigeria||Osun','Nigeria||Ondo','Nigeria||Ekiti',
+  'Nigeria||Edo','Nigeria||Delta','Nigeria||Rivers','Nigeria||Bayelsa',
+  'Nigeria||Anambra','Nigeria||Imo','Nigeria||Enugu','Nigeria||Ebonyi',
+  'Nigeria||Abia','Nigeria||Cross River','Nigeria||Akwa Ibom',
+  'Cameroon','DRC',
+  'DRC||Tanganyika','DRC||Haut-Lomami','DRC||Lualaba','DRC||Haut-Katanga',
+  'South Sudan','Uganda','Uganda||Karamoja','Kenya',
+  'Mozambique','Mozambique||Nampula','Madagascar'
 ];
 
-function rowKey(p) {
-  return p.region ? p.country + '||' + p.region : p.country;
-}
+const SUBREGION_COORDS = {
+  'Nigeria||Abia': [5.53, 7.49], 'Nigeria||Adamawa': [10.27, 13.27],
+  'Nigeria||Akwa Ibom': [5.01, 7.85], 'Nigeria||Anambra': [6.21, 7.07],
+  'Nigeria||Bauchi': [11.68, 10.19], 'Nigeria||Bayelsa': [4.77, 6.07],
+  'Nigeria||Benue': [7.19, 8.13], 'Nigeria||Borno': [10.62, 12.19],
+  'Nigeria||Cross River': [4.96, 8.33], 'Nigeria||Delta': [5.89, 5.68],
+  'Nigeria||Ebonyi': [6.26, 8.09], 'Nigeria||Edo': [6.34, 5.62],
+  'Nigeria||Ekiti': [7.63, 5.22], 'Nigeria||Enugu': [6.87, 7.38],
+  'Nigeria||FCT': [9.08, 7.53], 'Nigeria||FCT (Abuja)': [9.08, 7.53],
+  'Nigeria||Gombe': [10.29, 11.17], 'Nigeria||Imo': [5.49, 7.03],
+  'Nigeria||Jigawa': [11.80, 9.35], 'Nigeria||Kaduna': [11.08, 7.71],
+  'Nigeria||Kano': [12.00, 8.52], 'Nigeria||Katsina': [11.52, 7.32],
+  'Nigeria||Kebbi': [12.45, 4.20], 'Nigeria||Kogi': [7.80, 6.74],
+  'Nigeria||Kwara': [8.49, 4.55], 'Nigeria||Lagos': [6.44, 3.39],
+  'Nigeria||Nasarawa': [8.49, 8.52], 'Nigeria||Niger': [10.40, 5.47],
+  'Nigeria||Ogun': [7.16, 3.35], 'Nigeria||Ondo': [7.25, 5.20],
+  'Nigeria||Osun': [7.63, 4.18], 'Nigeria||Oyo': [7.97, 3.59],
+  'Nigeria||Plateau': [9.93, 8.89], 'Nigeria||Rivers': [4.81, 7.01],
+  'Nigeria||Sokoto': [13.06, 5.24], 'Nigeria||Taraba': [7.87, 9.78],
+  'Nigeria||Yobe': [11.75, 11.97], 'Nigeria||Zamfara': [12.17, 6.66],
+  'Nigeria||GF states': [9.08, 7.53], 'Nigeria||PMI states': [9.08, 7.53],
+  'DRC||Haut-Katanga': [-10.41, 27.55], 'DRC||Haut-Lomami': [-8.73, 24.98],
+  'DRC||Lualaba': [-10.72, 25.47], 'DRC||Tanganyika': [-6.69, 28.07],
+  'Uganda||Karamoja': [2.75, 34.25],
+  'Mozambique||Nampula': [-15.03, 40.73]
+};
 
-function rowLabel(key) {
-  const parts = key.split('||');
-  if (parts.length === 1) return parts[0];
-  return parts[0] + ' — ' + parts[1];
-}
+let DATA, sel = null, sortBy = 'effectiveness', geoData;
+const CHARITIES = ['AMF','MC','HKI','NI'];
 
-function isNigerianState(key) {
-  return key.startsWith('Nigeria||');
-}
-
-function isDRCProvince(key) {
-  return key.startsWith('DRC||');
-}
-
-function isSubRegion(key) {
-  return key.includes('||');
-}
+function rowKey(p) { return p.region ? p.country + '||' + p.region : p.country; }
+function isSubRegion(key) { return key.includes('||'); }
 
 async function init() {
   const [dataResp, geoResp] = await Promise.all([
@@ -437,10 +377,6 @@ async function init() {
   render();
 }
 
-function fp() {
-  return charFilter === 'all' ? DATA.programs : DATA.programs.filter(p => p.charityShort === charFilter);
-}
-
 function sortVal(p) {
   if (sortBy === 'lives') return p.outcomes.mortalitiesUnder5 + p.outcomes.mortalitiesOver5 + p.outcomes.mortalities5to14 + p.outcomes.mortalities15to49 + p.outcomes.mortalities50to74;
   if (sortBy === 'consumption') return p.outcomes.consumptionIncrease;
@@ -449,123 +385,135 @@ function sortVal(p) {
 
 function render() {
   renderHeatmap();
-  renderLB();
+  renderTopBar();
   renderLegend();
+}
+
+function progLabel(p) { return p.charityShort + ' ' + p.label; }
+
+function renderTopBar() {
+  const bar = document.getElementById('top-bar');
+  bar.querySelectorAll('.top-item').forEach(e => e.remove());
+  const sorted = [...DATA.programs].sort((a, b) => sortVal(b) - sortVal(a));
+  const top20 = sorted.slice(0, 20);
+
+  top20.forEach((p, i) => {
+    let vt;
+    if (sortBy === 'lives') {
+      const t = Math.round(p.outcomes.mortalitiesUnder5 + p.outcomes.mortalitiesOver5 + p.outcomes.mortalities5to14 + p.outcomes.mortalities15to49 + p.outcomes.mortalities50to74);
+      vt = t > 0 ? t : '—';
+    } else if (sortBy === 'consumption') {
+      vt = Math.round(p.outcomes.consumptionIncrease).toLocaleString();
+    } else {
+      vt = p.gwCostEffectiveness + 'x';
+    }
+
+    const d = document.createElement('div');
+    d.className = 'top-item' + (sel === p ? ' selected' : '');
+    d.onclick = () => selectProg(p);
+    d.innerHTML = `<span class="top-rank">${i+1}.</span>${progLabel(p)} ${vt}`;
+    bar.appendChild(d);
+  });
 }
 
 function renderHeatmap() {
   const el = document.getElementById('heatmap');
   el.innerHTML = '';
 
-  const programs = fp();
-  const charities = ['AMF','MC','HKI','NI'].filter(c => programs.some(p => p.charityShort === c));
-
-  // Build lookup: rowKey -> charity -> program
   const lookup = new Map();
-  programs.forEach(p => {
+  DATA.programs.forEach(p => {
     const rk = rowKey(p);
     if (!lookup.has(rk)) lookup.set(rk, {});
     lookup.get(rk)[p.charityShort] = p;
   });
 
-  // Get all row keys that exist in current filter, ordered geographically
-  const activeKeys = new Set(programs.map(p => rowKey(p)));
+  const activeKeys = new Set(DATA.programs.map(p => rowKey(p)));
   const orderedKeys = GEO_ORDER.filter(k => activeKeys.has(k));
-  // Add any keys not in GEO_ORDER at the end
   activeKeys.forEach(k => { if (!orderedKeys.includes(k)) orderedKeys.push(k); });
 
   const maxVal = Math.max(...DATA.programs.map(p => p.gwCostEffectiveness));
   const colorScale = d3.scaleSequential(d3.interpolateViridis).domain([0, maxVal]);
 
-  const ncols = charities.length;
   const table = document.createElement('table');
-  table.style.cssText = 'border-collapse:separate; border-spacing:3px; width:100%;';
+  table.className = 'hm-table';
 
-  // Header row
+  // Header
   const thead = document.createElement('thead');
   const hrow = document.createElement('tr');
-  const cornerTh = document.createElement('th');
-  cornerTh.style.cssText = 'width:160px; min-width:120px;';
-  hrow.appendChild(cornerTh);
-  charities.forEach(c => {
+  const corner = document.createElement('th');
+  corner.className = 'col-label';
+  hrow.appendChild(corner);
+  CHARITIES.forEach(c => {
     const th = document.createElement('th');
-    th.style.cssText = `text-align:center; font-size:12px; font-weight:700; padding:6px 4px; color:${CC[c]}; white-space:nowrap;`;
+    th.className = 'col-charity';
     th.textContent = c;
+    th.title = FULL_NAMES[c];
     hrow.appendChild(th);
   });
   thead.appendChild(hrow);
   table.appendChild(thead);
 
-  // Body rows
+  const countriesWithSubs = new Set();
+  orderedKeys.forEach(k => { if (isSubRegion(k)) countriesWithSubs.add(k.split('||')[0]); });
+
   const tbody = document.createElement('tbody');
   let lastCountry = '';
+  let sectionInserted = new Set();
 
   orderedKeys.forEach(key => {
     const parts = key.split('||');
     const country = parts[0];
     const region = parts[1] || null;
+    const countryHasSubs = countriesWithSubs.has(country);
 
-    // Insert section header when entering a new country that has sub-regions
     if (country !== lastCountry) {
-      const hasSubRegions = orderedKeys.some(k => k.startsWith(country + '||'));
-      const hasCountryLevel = orderedKeys.includes(country);
-      if (hasSubRegions && country !== lastCountry && lastCountry !== '') {
-        const sepRow = document.createElement('tr');
-        const sepTd = document.createElement('td');
-        sepTd.colSpan = ncols + 1;
-        sepTd.style.cssText = 'padding:10px 0 4px; font-size:12px; font-weight:700; color:var(--text); border-top:2px solid var(--border);';
-        sepTd.textContent = country;
-        sepRow.appendChild(sepTd);
-        tbody.appendChild(sepRow);
-      } else if (!isSubRegion(key) && lastCountry !== '') {
-        // Just a divider line for new country without sub-regions
+      if (countryHasSubs && !sectionInserted.has(country)) {
+        const sr = document.createElement('tr');
+        sr.className = 'hm-section-row';
+        const std = document.createElement('td');
+        std.colSpan = 5;
+        std.textContent = country;
+        sr.appendChild(std);
+        tbody.appendChild(sr);
+        sectionInserted.add(country);
+      } else if (!countryHasSubs && lastCountry !== '') {
+        const divRow = document.createElement('tr');
+        divRow.className = 'hm-divider';
+        const divTd = document.createElement('td');
+        divTd.colSpan = 5;
+        divRow.appendChild(divTd);
+        tbody.appendChild(divRow);
       }
     }
 
     const row = document.createElement('tr');
 
-    // Row label
     const td0 = document.createElement('td');
     td0.className = 'hm-row-label';
-    if (isSubRegion(key)) {
-      td0.innerHTML = `<span style="color:var(--text-dim);font-size:10px;">${region}</span>`;
-      td0.style.paddingLeft = '8px';
+    if (countryHasSubs) {
+      td0.textContent = region || '(all)';
+      td0.style.paddingLeft = '10px';
     } else {
-      td0.innerHTML = `<span style="font-weight:600;font-size:11px;">${country}</span>`;
-      if (country !== lastCountry && lastCountry !== '') {
-        td0.style.borderTop = '2px solid var(--border)';
-      }
+      td0.textContent = country;
     }
-
     row.appendChild(td0);
 
-    charities.forEach(c => {
+    CHARITIES.forEach(c => {
       const td = document.createElement('td');
       const prog = lookup.has(key) ? lookup.get(key)[c] : null;
-
       if (prog) {
         const v = prog.gwCostEffectiveness;
         td.className = 'hm-cell' + (sel === prog ? ' selected' : '');
-        td.style.cssText = `
-          background:${colorScale(v)};
-          color:${v > maxVal * 0.55 ? '#000' : '#fff'};
-          text-align:center; padding:4px 6px; cursor:pointer;
-          border-radius:4px; font-size:11px; font-weight:700;
-          min-width:60px;
-        `;
+        td.style.background = colorScale(v);
+        td.style.color = v > maxVal * 0.55 ? '#000' : '#fff';
         td.textContent = v + 'x';
         td.onclick = () => selectProg(prog);
         td.addEventListener('mouseenter', e => showTooltip(e, prog));
         td.addEventListener('mouseleave', hideTooltip);
       } else {
-        td.style.cssText = 'text-align:center; padding:4px; color:var(--border); font-size:10px;';
-        td.textContent = '—';
+        td.className = 'hm-empty';
+        td.textContent = '·';
       }
-
-      if (!isSubRegion(key) && country !== lastCountry && lastCountry !== '') {
-        td.style.borderTop = '2px solid var(--border)';
-      }
-
       row.appendChild(td);
     });
 
@@ -577,34 +525,6 @@ function renderHeatmap() {
   el.appendChild(table);
 }
 
-function renderLB() {
-  const list = document.getElementById('lb-list');
-  list.innerHTML = '';
-  const sorted = [...fp()].sort((a, b) => sortVal(b) - sortVal(a));
-
-  sorted.forEach((p, i) => {
-    let vt;
-    if (sortBy === 'lives') {
-      const t = Math.round(p.outcomes.mortalitiesUnder5 + p.outcomes.mortalitiesOver5 + p.outcomes.mortalities5to14 + p.outcomes.mortalities15to49 + p.outcomes.mortalities50to74);
-      vt = t > 0 ? t + '' : '—';
-    } else if (sortBy === 'consumption') {
-      vt = Math.round(p.outcomes.consumptionIncrease).toLocaleString();
-    } else {
-      vt = p.gwCostEffectiveness + 'x';
-    }
-
-    const d = document.createElement('div');
-    d.className = 'lb-item' + (sel === p ? ' selected' : '');
-    d.onclick = () => selectProg(p);
-    d.innerHTML = `
-      <span class="lb-rank">${i+1}</span>
-      <span class="lb-dot" style="background:${CC[p.charityShort]}"></span>
-      <div class="lb-info"><div class="lb-name">${p.label}</div><div class="lb-charity">${p.charityShort}</div></div>
-      <span class="lb-score">${vt}</span>`;
-    list.appendChild(d);
-  });
-}
-
 function renderLegend() {
   const bar = document.getElementById('legend-bar');
   const stops = Array.from({length:11}, (_, i) => d3.interpolateViridis(i/10));
@@ -613,19 +533,24 @@ function renderLegend() {
 
 function selectProg(p) {
   sel = p;
-  document.getElementById('prompt-panel').classList.remove('visible');
-  document.getElementById('detail-panel').classList.add('visible');
+  document.getElementById('prompt-msg').style.display = 'none';
+  document.getElementById('detail-content').style.display = 'block';
   renderDetail(p);
   renderHeatmap();
-  renderLB();
-  document.getElementById('detail-panel').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  renderTopBar();
 }
 
 function renderDetail(p) {
-  const tag = `<span class="charity-tag charity-tag-${p.charityShort.toLowerCase()}">${p.charityShort}</span>`;
-  document.getElementById('d-title').innerHTML = `$1M to ${tag} in ${p.label}`;
-  document.getElementById('d-sub').textContent = p.charity;
-  document.getElementById('d-badge').textContent = p.gwCostEffectiveness + 'x cash';
+  document.getElementById('d-title').textContent = `$1M to ${p.charity} in ${p.label}`;
+  document.getElementById('d-score-num').textContent = p.gwCostEffectiveness + '×';
+
+  const o = p.outcomes;
+  const totalLives = Math.round(o.mortalitiesUnder5 + o.mortalitiesOver5 + o.mortalities5to14 + o.mortalities15to49 + o.mortalities50to74);
+  document.getElementById('d-lives-title').textContent = totalLives > 0
+    ? `${totalLives.toLocaleString()} lives saved per $1M`
+    : 'Lives saved per $1M';
+  document.getElementById('d-econ-title').textContent =
+    `${Math.round(o.consumptionIncrease).toLocaleString()} economic impact per $1M`;
 
   renderLives(p);
   renderEcon(p);
@@ -642,31 +567,39 @@ function renderLives(p) {
   const maxL = Math.max(...DATA.programs.map(q => q.outcomes.mortalitiesUnder5 + q.outcomes.mortalitiesOver5 + q.outcomes.mortalities5to14 + q.outcomes.mortalities15to49 + q.outcomes.mortalities50to74));
 
   if (total < 0.5) {
-    el.innerHTML = '<p style="color:var(--text-dim);font-size:13px;">This program primarily improves economic wellbeing rather than reducing mortality directly.</p>';
+    el.innerHTML = '<p style="color:var(--text-dim);font-size:11px;padding-top:4px;">Primarily improves economic wellbeing rather than direct mortality reduction.</p>';
     return;
   }
 
-  let h = '';
-  if (u5 > 0.5) {
-    const n = Math.round(u5);
-    h += `<div class="impact-row"><span class="impact-num" style="color:var(--green)">${n}</span><span class="impact-lbl">children under 5 saved</span></div>`;
-    h += `<div class="dots">${Array(Math.min(n, 150)).fill('<span class="dot dot-u5"></span>').join('')}</div>`;
-  }
-  if (o5 > 0.5) {
-    const n = Math.round(o5);
-    h += `<div class="impact-row"><span class="impact-num" style="color:var(--accent)">${n}</span><span class="impact-lbl">people over 5 saved</span></div>`;
-    h += `<div class="dots">${Array(Math.min(n, 150)).fill('<span class="dot dot-o5"></span>').join('')}</div>`;
-  }
-  const extras = [];
-  if (a5 > 0.5) extras.push(`${Math.round(a5)} ages 5-14`);
-  if (a15 > 0.5) extras.push(`${Math.round(a15)} ages 15-49`);
-  if (a50 > 0.5) extras.push(`${Math.round(a50)} ages 50-74`);
-  if (extras.length) {
-    h += `<div class="impact-row"><span class="impact-num" style="color:var(--accent)">${extras.map(e => e.split(' ')[0]).reduce((a,b) => +a + +b, 0)}</span><span class="impact-lbl">more saved (${extras.join(', ')})</span></div>`;
-  }
+  const groups = [];
+  if (u5 > 0.5) groups.push({ n: Math.round(u5), lbl: 'children under 5', size: 3 });
+  if (o5 > 0.5) groups.push({ n: Math.round(o5), lbl: 'people over 5', size: 4 });
+  if (a5 > 0.5) groups.push({ n: Math.round(a5), lbl: 'ages 5–14', size: 5 });
+  if (a15 > 0.5) groups.push({ n: Math.round(a15), lbl: 'ages 15–49', size: 7 });
+  if (a50 > 0.5) groups.push({ n: Math.round(a50), lbl: 'ages 50–74', size: 9 });
+
+  let h = '<div class="dot-field">';
+  groups.forEach(g => {
+    h += `<div class="dot-group-wrap"><span class="dot-label">${g.n} ${g.lbl}</span>`;
+    const cap = Math.min(g.n, 1500);
+    for (let i = 0; i < cap; i++) {
+      h += `<span class="dot" style="width:${g.size}px;height:${g.size}px"></span>`;
+    }
+    h += '</div>';
+  });
+  h += '</div>';
 
   const pct = (total / maxL) * 100;
-  h += `<div class="bar-wrap"><div class="bar-bg"><div class="bar-fill" style="width:${pct}%;background:var(--green)"></div></div><div class="bar-label">${Math.round(total)} total — ${Math.round(pct)}% of most effective</div></div>`;
+  h += `<div class="bar-wrap"><div class="bar-bg"><div class="bar-fill" style="width:${pct}%"></div></div><div class="bar-label">${Math.round(pct)}% of best program</div></div>`;
+
+  if (groups.length > 1) {
+    h += '<div class="dot-legend">';
+    groups.forEach(g => {
+      h += `<span class="dot-legend-item"><span class="dot" style="width:${g.size}px;height:${g.size}px;opacity:1"></span>${g.lbl}</span>`;
+    });
+    h += '</div>';
+  }
+
   el.innerHTML = h;
 }
 
@@ -677,55 +610,51 @@ function renderEcon(p) {
   const avg = DATA.programs.reduce((s, q) => s + q.outcomes.consumptionIncrease, 0) / DATA.programs.length;
   const ratio = v / avg;
   const pct = (v / maxV) * 100;
-
   el.innerHTML = `
-    <div class="impact-row"><span class="impact-num" style="color:var(--amber)">${Math.round(v).toLocaleString()}</span><span class="impact-lbl">economic impact score</span></div>
-    <div class="bar-wrap"><div class="bar-bg"><div class="bar-fill" style="width:${pct}%;background:var(--amber)"></div></div>
-    <div class="bar-label">${ratio >= 1 ? ratio.toFixed(1) + 'x' : Math.round(ratio * 100) + '% of'} the average program</div></div>
-    <p style="font-size:11px;color:var(--text-dim);margin-top:6px;">Measured in lifetime consumption increases (ln$). Higher = more economic improvement for people reached.</p>`;
+    <div class="bar-wrap"><div class="bar-bg"><div class="bar-fill" style="width:${pct}%"></div></div>
+    <div class="bar-label">${ratio >= 1 ? ratio.toFixed(1) + 'x' : Math.round(ratio * 100) + '% of'} avg · lifetime consumption increase (ln$)</div></div>`;
 }
 
 function renderMap(p) {
   const el = document.getElementById('d-map');
   el.innerHTML = '';
-  if (!geoData) { el.innerHTML = '<p style="color:var(--text-dim);font-size:12px;">Map unavailable</p>'; return; }
-
+  if (!geoData) { el.innerHTML = '<p style="color:var(--text-dim);font-size:11px;">Map unavailable</p>'; return; }
   const af = geoData.features.filter(f => AFRICA_IDS.includes(f.id));
-  const w = 240, ht = 240;
-  const proj = d3.geoMercator().center([20, 2]).scale(190).translate([w/2, ht/2]);
+  const w = 200, ht = 200;
+  const proj = d3.geoMercator().center([20, 2]).scale(160).translate([w/2, ht/2]);
   const path = d3.geoPath().projection(proj);
-
   const withProgs = new Set(DATA.programs.map(q => ISO_NUM[q.country]));
   const hId = ISO_NUM[p.country];
+  const rk = rowKey(p);
+  const hasPin = p.region && SUBREGION_COORDS[rk];
 
   const svg = d3.select(el).append('svg').attr('viewBox', `0 0 ${w} ${ht}`).attr('width', '100%');
   svg.selectAll('path').data(af).join('path').attr('d', path)
-    .attr('class', d => 'map-country' + (d.id === hId ? ' highlighted' : withProgs.has(d.id) ? ' has-programs' : ''));
+    .attr('class', d => {
+      if (d.id === hId) return 'map-country' + (hasPin ? ' has-programs' : ' highlighted');
+      if (withProgs.has(d.id)) return 'map-country has-programs';
+      return 'map-country';
+    });
 
-  if (p.region) {
-    svg.append('text').attr('x', w/2).attr('y', ht-6).attr('text-anchor','middle')
-      .attr('fill','var(--text-dim)').attr('font-size','10px').text('Region: ' + p.region);
+  if (hasPin) {
+    const [lat, lng] = SUBREGION_COORDS[rk];
+    const [cx, cy] = proj([lng, lat]);
+    const g = svg.append('g').attr('transform', `translate(${cx},${cy})`);
+    g.append('circle').attr('r', 8).attr('fill', 'rgba(108,140,255,0.25)').attr('stroke', 'none');
+    g.append('circle').attr('r', 3.5).attr('fill', '#fff').attr('stroke', 'var(--accent)').attr('stroke-width', 1.5);
+    svg.append('text').attr('x', cx).attr('y', cy + 14).attr('text-anchor', 'middle')
+      .attr('fill', 'var(--text)').attr('font-size', '8px').attr('font-weight', '600').text(p.region);
   }
 }
 
 function renderAbout(p) {
   document.getElementById('d-about').innerHTML = `
-    <h4 style="font-size:14px;font-weight:600;margin-bottom:6px;">${p.charity}</h4>
-    <p style="font-size:12px;color:var(--text-dim);line-height:1.5;">${DESCS[p.charity] || 'Description coming soon.'}</p>`;
+    <h4 style="font-size:12px;font-weight:600;margin-bottom:4px;">${p.charity}</h4>
+    <p style="font-size:11px;color:var(--text-dim);line-height:1.4;">${DESCS[p.charity] || ''}</p>`;
 }
 
-function filterCharity(c) {
-  charFilter = c;
-  document.querySelectorAll('.cf-btn').forEach(b => b.classList.toggle('active', b.dataset.c === c));
-  if (sel && c !== 'all' && sel.charityShort !== c) {
-    sel = null;
-    document.getElementById('detail-panel').classList.remove('visible');
-    document.getElementById('prompt-panel').classList.add('visible');
-  }
-  render();
-}
+function changeSort(v) { sortBy = v; renderTopBar(); }
 
-function changeSort(v) { sortBy = v; renderLB(); }
 function showTooltip(e, p) {
   const tt = document.getElementById('tooltip');
   const totalLives = Math.round(p.outcomes.mortalitiesUnder5 + p.outcomes.mortalitiesOver5 + p.outcomes.mortalities5to14 + p.outcomes.mortalities15to49 + p.outcomes.mortalities50to74);
@@ -733,29 +662,18 @@ function showTooltip(e, p) {
     <div class="tooltip-name">${p.label}</div>
     <div class="tooltip-charity">${p.charity}</div>
     <div class="tooltip-val">${p.gwCostEffectiveness}x cash</div>
-    <div style="font-size:11px;color:var(--text-dim);margin-top:2px">${totalLives > 0 ? totalLives + ' lives saved' : 'Economic impact focused'} per $1M</div>`;
+    <div style="font-size:10px;color:var(--text-dim);margin-top:2px">${totalLives > 0 ? totalLives + ' lives saved' : 'Economic impact'} per $1M</div>`;
   tt.classList.add('show');
   positionTooltip(e);
 }
-
 function positionTooltip(e) {
   const tt = document.getElementById('tooltip');
-  const x = e.clientX + 12;
-  const y = e.clientY - 10;
-  tt.style.left = Math.min(x, window.innerWidth - 240) + 'px';
-  tt.style.top = y + 'px';
+  tt.style.left = Math.min(e.clientX + 12, window.innerWidth - 220) + 'px';
+  tt.style.top = (e.clientY - 10) + 'px';
 }
-
-function hideTooltip() {
-  document.getElementById('tooltip').classList.remove('show');
-}
-
-document.addEventListener('mousemove', e => {
-  if (document.getElementById('tooltip').classList.contains('show')) positionTooltip(e);
-});
-
+function hideTooltip() { document.getElementById('tooltip').classList.remove('show'); }
+document.addEventListener('mousemove', e => { if (document.getElementById('tooltip').classList.contains('show')) positionTooltip(e); });
 function setMode() {}
-
 init();
 </script>
 </body>
