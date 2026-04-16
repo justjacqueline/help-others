@@ -1,0 +1,2665 @@
+{
+  "programs": [
+    {
+      "charity": "Against Malaria Foundation",
+      "charityShort": "AMF",
+      "country": "Chad",
+      "region": null,
+      "label": "Chad",
+      "outcomes": {
+        "mortalitiesUnder5": 46.8853777,
+        "mortalitiesOver5": 22.11568348,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 2983.821758
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.04,
+        "interventionLevel": 0.529,
+        "leverageFunging": -0.03854840393
+      },
+      "gwCostEffectiveness": 4.8
+    },
+    {
+      "charity": "Against Malaria Foundation",
+      "charityShort": "AMF",
+      "country": "DRC",
+      "region": null,
+      "label": "DRC",
+      "outcomes": {
+        "mortalitiesUnder5": 202.5671883,
+        "mortalitiesOver5": 48.09708063,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 9224.723502
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.04,
+        "interventionLevel": 0.479,
+        "leverageFunging": -0.1502749842
+      },
+      "gwCostEffectiveness": 14.5
+    },
+    {
+      "charity": "Against Malaria Foundation",
+      "charityShort": "AMF",
+      "country": "Guinea",
+      "region": null,
+      "label": "Guinea",
+      "outcomes": {
+        "mortalitiesUnder5": 449.4971659,
+        "mortalitiesOver5": 138.6945309,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 13650.61046
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.04,
+        "interventionLevel": 0.379,
+        "leverageFunging": -0.3016845139
+      },
+      "gwCostEffectiveness": 22.6
+    },
+    {
+      "charity": "Against Malaria Foundation",
+      "charityShort": "AMF",
+      "country": "Nigeria",
+      "region": "GF states",
+      "label": "Nigeria (GF states)",
+      "outcomes": {
+        "mortalitiesUnder5": 247.7577553,
+        "mortalitiesOver5": 144.4130594,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 10715.55916
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.04,
+        "interventionLevel": 0.479,
+        "leverageFunging": -0.2823157688
+      },
+      "gwCostEffectiveness": 16.7
+    },
+    {
+      "charity": "Against Malaria Foundation",
+      "charityShort": "AMF",
+      "country": "Nigeria",
+      "region": "PMI states",
+      "label": "Nigeria (PMI states)",
+      "outcomes": {
+        "mortalitiesUnder5": 144.5921218,
+        "mortalitiesOver5": 99.19132593,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 8458.160062
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.04,
+        "interventionLevel": 0.479,
+        "leverageFunging": -0.1432252715
+      },
+      "gwCostEffectiveness": 13.2
+    },
+    {
+      "charity": "Against Malaria Foundation",
+      "charityShort": "AMF",
+      "country": "South Sudan",
+      "region": null,
+      "label": "South Sudan",
+      "outcomes": {
+        "mortalitiesUnder5": 100.8295162,
+        "mortalitiesOver5": 22.10557874,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 4199.32103
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.04,
+        "interventionLevel": 0.379,
+        "leverageFunging": -0.07114621795
+      },
+      "gwCostEffectiveness": 7.1
+    },
+    {
+      "charity": "Against Malaria Foundation",
+      "charityShort": "AMF",
+      "country": "Togo",
+      "region": null,
+      "label": "Togo",
+      "outcomes": {
+        "mortalitiesUnder5": 103.7641668,
+        "mortalitiesOver5": 156.971275,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 10050.82857
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.04,
+        "interventionLevel": 0.379,
+        "leverageFunging": -0.4178738301
+      },
+      "gwCostEffectiveness": 8.7
+    },
+    {
+      "charity": "Against Malaria Foundation",
+      "charityShort": "AMF",
+      "country": "Uganda",
+      "region": null,
+      "label": "Uganda",
+      "outcomes": {
+        "mortalitiesUnder5": 293.5615279,
+        "mortalitiesOver5": 70.2534621,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 12858.51895
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.04,
+        "interventionLevel": 0.379,
+        "leverageFunging": -0.3212050528
+      },
+      "gwCostEffectiveness": 15.5
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Burkina Faso",
+      "region": null,
+      "label": "Burkina Faso",
+      "outcomes": {
+        "mortalitiesUnder5": 657.2987183,
+        "mortalitiesOver5": 58.9648955,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 10566.94896
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.191,
+        "leverageFunging": -0.4294575887
+      },
+      "gwCostEffectiveness": 17.9
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Chad",
+      "region": null,
+      "label": "Chad",
+      "outcomes": {
+        "mortalitiesUnder5": 192.6746845,
+        "mortalitiesOver5": 16.9310606,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 5788.385157
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.241,
+        "leverageFunging": -0.2688426256
+      },
+      "gwCostEffectiveness": 8.0
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "DRC",
+      "region": "Haut-Katanga",
+      "label": "DRC (Haut-Katanga)",
+      "outcomes": {
+        "mortalitiesUnder5": 163.4836115,
+        "mortalitiesOver5": 7.569579933,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 3284.548311
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.281,
+        "leverageFunging": -0.08688918656
+      },
+      "gwCostEffectiveness": 7.8
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "DRC",
+      "region": "Haut-Lomami",
+      "label": "DRC (Haut-Lomami)",
+      "outcomes": {
+        "mortalitiesUnder5": 193.5565905,
+        "mortalitiesOver5": 8.962011944,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 4002.407856
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.281,
+        "leverageFunging": -0.0969968724
+      },
+      "gwCostEffectiveness": 9.2
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "DRC",
+      "region": "Lualaba",
+      "label": "DRC (Lualaba)",
+      "outcomes": {
+        "mortalitiesUnder5": 192.2194149,
+        "mortalitiesOver5": 8.900098345,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 3779.752483
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.281,
+        "leverageFunging": -0.09610038761
+      },
+      "gwCostEffectiveness": 9.0
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "DRC",
+      "region": "Tanganyika",
+      "label": "DRC (Tanganyika)",
+      "outcomes": {
+        "mortalitiesUnder5": 289.0264792,
+        "mortalitiesOver5": 13.38243643,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 3751.774671
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.281,
+        "leverageFunging": -0.1116558454
+      },
+      "gwCostEffectiveness": 12.5
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Mozambique",
+      "region": "Nampula",
+      "label": "Mozambique (Nampula)",
+      "outcomes": {
+        "mortalitiesUnder5": 246.6668663,
+        "mortalitiesOver5": 49.25059921,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 3850.861276
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.281,
+        "leverageFunging": -0.1414956146
+      },
+      "gwCostEffectiveness": 11.4
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Nigeria",
+      "region": "Bauchi",
+      "label": "Nigeria (Bauchi)",
+      "outcomes": {
+        "mortalitiesUnder5": 469.4612198,
+        "mortalitiesOver5": 17.46194043,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 9107.85972
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.341,
+        "leverageFunging": -0.1693250961
+      },
+      "gwCostEffectiveness": 21.1
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Nigeria",
+      "region": "Borno",
+      "label": "Nigeria (Borno)",
+      "outcomes": {
+        "mortalitiesUnder5": 316.7073189,
+        "mortalitiesOver5": 37.29211266,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 9431.771375
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.341,
+        "leverageFunging": -0.08462472306
+      },
+      "gwCostEffectiveness": 17.9
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Nigeria",
+      "region": "FCT (Abuja)",
+      "label": "Nigeria (FCT (Abuja))",
+      "outcomes": {
+        "mortalitiesUnder5": 268.1588581,
+        "mortalitiesOver5": 54.74260851,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 8446.781976
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.341,
+        "leverageFunging": -0.08274604181
+      },
+      "gwCostEffectiveness": 16.0
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Nigeria",
+      "region": "Kebbi",
+      "label": "Nigeria (Kebbi)",
+      "outcomes": {
+        "mortalitiesUnder5": 603.516086,
+        "mortalitiesOver5": 39.92847868,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 16331.04143
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.341,
+        "leverageFunging": -0.178101104
+      },
+      "gwCostEffectiveness": 29.2
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Nigeria",
+      "region": "Kogi",
+      "label": "Nigeria (Kogi)",
+      "outcomes": {
+        "mortalitiesUnder5": 326.3923592,
+        "mortalitiesOver5": 103.2847178,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 11584.00811
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.341,
+        "leverageFunging": -0.08686396049
+      },
+      "gwCostEffectiveness": 20.9
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Nigeria",
+      "region": "Nasarawa",
+      "label": "Nigeria (Nasarawa)",
+      "outcomes": {
+        "mortalitiesUnder5": 419.0243331,
+        "mortalitiesOver5": 59.80544571,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 13587.52031
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.341,
+        "leverageFunging": -0.1708858126
+      },
+      "gwCostEffectiveness": 22.2
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Nigeria",
+      "region": "Oyo",
+      "label": "Nigeria (Oyo)",
+      "outcomes": {
+        "mortalitiesUnder5": 343.9975353,
+        "mortalitiesOver5": 150.4070838,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 19715.77499
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.341,
+        "leverageFunging": -0.1733596936
+      },
+      "gwCostEffectiveness": 24.2
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Nigeria",
+      "region": "Plateau",
+      "label": "Nigeria (Plateau)",
+      "outcomes": {
+        "mortalitiesUnder5": 290.8287103,
+        "mortalitiesOver5": 50.60034608,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 9689.778642
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.341,
+        "leverageFunging": -0.1588991628
+      },
+      "gwCostEffectiveness": 15.9
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Nigeria",
+      "region": "Sokoto",
+      "label": "Nigeria (Sokoto)",
+      "outcomes": {
+        "mortalitiesUnder5": 662.1759943,
+        "mortalitiesOver5": 25.15546639,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 13300.36872
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.341,
+        "leverageFunging": -0.1784062686
+      },
+      "gwCostEffectiveness": 29.6
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Togo",
+      "region": null,
+      "label": "Togo",
+      "outcomes": {
+        "mortalitiesUnder5": 289.3490724,
+        "mortalitiesOver5": 81.27137126,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 14853.9206
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.291,
+        "leverageFunging": -0.5144116485
+      },
+      "gwCostEffectiveness": 10.5
+    },
+    {
+      "charity": "Malaria Consortium",
+      "charityShort": "MC",
+      "country": "Uganda",
+      "region": "Karamoja",
+      "label": "Uganda (Karamoja)",
+      "outcomes": {
+        "mortalitiesUnder5": 264.3733772,
+        "mortalitiesOver5": 12.23808799,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 3525.685886
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.08,
+        "interventionLevel": 0.281,
+        "leverageFunging": -0.2026650388
+      },
+      "gwCostEffectiveness": 10.3
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Burkina Faso",
+      "region": null,
+      "label": "Burkina Faso",
+      "outcomes": {
+        "mortalitiesUnder5": 553.3609059,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 11165.5556
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2915412613
+      },
+      "gwCostEffectiveness": 22.4
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Cameroon",
+      "region": null,
+      "label": "Cameroon",
+      "outcomes": {
+        "mortalitiesUnder5": 423.8240432,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 8551.798421
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.3490264075
+      },
+      "gwCostEffectiveness": 15.8
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "C\u00f4te d'Ivoire",
+      "region": null,
+      "label": "C\u00f4te d'Ivoire",
+      "outcomes": {
+        "mortalitiesUnder5": 239.4659698,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 4831.874772
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.3815471749
+      },
+      "gwCostEffectiveness": 8.5
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "DRC",
+      "region": null,
+      "label": "DRC",
+      "outcomes": {
+        "mortalitiesUnder5": 371.1726522,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 7489.413948
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2096512743
+      },
+      "gwCostEffectiveness": 16.8
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Guinea",
+      "region": null,
+      "label": "Guinea",
+      "outcomes": {
+        "mortalitiesUnder5": 313.4678109,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 6325.062425
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.3951473048
+      },
+      "gwCostEffectiveness": 10.9
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Kenya",
+      "region": null,
+      "label": "Kenya",
+      "outcomes": {
+        "mortalitiesUnder5": 128.4426493,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 2591.678465
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.3522075546
+      },
+      "gwCostEffectiveness": 4.8
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Madagascar",
+      "region": null,
+      "label": "Madagascar",
+      "outcomes": {
+        "mortalitiesUnder5": 364.9105494,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 7363.059056
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2436933608
+      },
+      "gwCostEffectiveness": 15.8
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Mali",
+      "region": null,
+      "label": "Mali",
+      "outcomes": {
+        "mortalitiesUnder5": 877.5247342,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 17706.43916
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.3511315453
+      },
+      "gwCostEffectiveness": 32.6
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Niger",
+      "region": null,
+      "label": "Niger",
+      "outcomes": {
+        "mortalitiesUnder5": 1474.606393,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 29754.17942
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.302039906
+      },
+      "gwCostEffectiveness": 58.9
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Adamawa",
+      "label": "Nigeria (Adamawa)",
+      "outcomes": {
+        "mortalitiesUnder5": 503.0902231,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 10151.20837
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2595389409
+      },
+      "gwCostEffectiveness": 21.3
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Akwa Ibom",
+      "label": "Nigeria (Akwa Ibom)",
+      "outcomes": {
+        "mortalitiesUnder5": 108.4653177,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 2188.581671
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2942440774
+      },
+      "gwCostEffectiveness": 4.4
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Anambra",
+      "label": "Nigeria (Anambra)",
+      "outcomes": {
+        "mortalitiesUnder5": 59.72991425,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 1205.212858
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.3303441286
+      },
+      "gwCostEffectiveness": 2.3
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Benue",
+      "label": "Nigeria (Benue)",
+      "outcomes": {
+        "mortalitiesUnder5": 226.7458432,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 4575.211754
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2711644361
+      },
+      "gwCostEffectiveness": 9.5
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Delta",
+      "label": "Nigeria (Delta)",
+      "outcomes": {
+        "mortalitiesUnder5": 126.6013271,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 2554.524799
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2879059843
+      },
+      "gwCostEffectiveness": 5.2
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Ebonyi",
+      "label": "Nigeria (Ebonyi)",
+      "outcomes": {
+        "mortalitiesUnder5": 319.0276366,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 6437.246972
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2650424207
+      },
+      "gwCostEffectiveness": 13.4
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Edo",
+      "label": "Nigeria (Edo)",
+      "outcomes": {
+        "mortalitiesUnder5": 94.5636909,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 1908.078684
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.3007483144
+      },
+      "gwCostEffectiveness": 3.8
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Ekiti",
+      "label": "Nigeria (Ekiti)",
+      "outcomes": {
+        "mortalitiesUnder5": 142.71903,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 2879.743126
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2836251438
+      },
+      "gwCostEffectiveness": 5.9
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Imo",
+      "label": "Nigeria (Imo)",
+      "outcomes": {
+        "mortalitiesUnder5": 79.37909823,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 1601.688384
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.3104560649
+      },
+      "gwCostEffectiveness": 3.1
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Kogi",
+      "label": "Nigeria (Kogi)",
+      "outcomes": {
+        "mortalitiesUnder5": 103.2477618,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 2083.303343
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.296479922
+      },
+      "gwCostEffectiveness": 4.2
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Nasarawa",
+      "label": "Nigeria (Nasarawa)",
+      "outcomes": {
+        "mortalitiesUnder5": 283.3466456,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 5717.2863
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2669366675
+      },
+      "gwCostEffectiveness": 11.9
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Ogun",
+      "label": "Nigeria (Ogun)",
+      "outcomes": {
+        "mortalitiesUnder5": 118.0508736,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 2381.996234
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2906515239
+      },
+      "gwCostEffectiveness": 4.8
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Osun",
+      "label": "Nigeria (Osun)",
+      "outcomes": {
+        "mortalitiesUnder5": 60.24523331,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 1215.610816
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.3296568898
+      },
+      "gwCostEffectiveness": 2.3
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Rivers",
+      "label": "Nigeria (Rivers)",
+      "outcomes": {
+        "mortalitiesUnder5": 184.1408932,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 3715.541448
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2760612829
+      },
+      "gwCostEffectiveness": 7.6
+    },
+    {
+      "charity": "Helen Keller International",
+      "charityShort": "HKI",
+      "country": "Nigeria",
+      "region": "Taraba",
+      "label": "Nigeria (Taraba)",
+      "outcomes": {
+        "mortalitiesUnder5": 676.1169046,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0,
+        "mortalities15to49": 0,
+        "mortalities50to74": 0,
+        "consumptionIncrease": 13642.49049
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 118.73,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.22,
+        "interventionLevel": 0.665,
+        "leverageFunging": -0.2570978079
+      },
+      "gwCostEffectiveness": 28.7
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Bauchi",
+      "label": "Nigeria (Bauchi)",
+      "outcomes": {
+        "mortalitiesUnder5": 322.3745515,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 22.23525671,
+        "mortalities15to49": 22.67075833,
+        "mortalities50to74": 38.37434981,
+        "consumptionIncrease": 10306.74237
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.503,
+        "leverageFunging": -0.1341203548
+      },
+      "gwCostEffectiveness": 21.4
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Gombe",
+      "label": "Nigeria (Gombe)",
+      "outcomes": {
+        "mortalitiesUnder5": 158.0315503,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 10.51239374,
+        "mortalities15to49": 9.38893347,
+        "mortalities50to74": 19.00005963,
+        "consumptionIncrease": 5915.290629
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.503,
+        "leverageFunging": -0.1404045728
+      },
+      "gwCostEffectiveness": 10.8
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Jigawa",
+      "label": "Nigeria (Jigawa)",
+      "outcomes": {
+        "mortalitiesUnder5": 293.893271,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 19.07227023,
+        "mortalities15to49": 19.91384567,
+        "mortalities50to74": 28.81083518,
+        "consumptionIncrease": 9513.554002
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.503,
+        "leverageFunging": -0.1276987511
+      },
+      "gwCostEffectiveness": 19.5
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Kaduna",
+      "label": "Nigeria (Kaduna)",
+      "outcomes": {
+        "mortalitiesUnder5": 144.7950222,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 9.647646017,
+        "mortalities15to49": 9.515241097,
+        "mortalities50to74": 14.5076433,
+        "consumptionIncrease": 5563.850062
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.503,
+        "leverageFunging": -0.1616299247
+      },
+      "gwCostEffectiveness": 9.7
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Kano",
+      "label": "Nigeria (Kano)",
+      "outcomes": {
+        "mortalitiesUnder5": 200.9164894,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 13.79523458,
+        "mortalities15to49": 11.76591548,
+        "mortalities50to74": 18.81499432,
+        "consumptionIncrease": 7067.586039
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.503,
+        "leverageFunging": -0.1463342526
+      },
+      "gwCostEffectiveness": 13.3
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Katsina",
+      "label": "Nigeria (Katsina)",
+      "outcomes": {
+        "mortalitiesUnder5": 264.715842,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 19.63896463,
+        "mortalities15to49": 22.0169243,
+        "mortalities50to74": 33.7867968,
+        "consumptionIncrease": 8809.103057
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.503,
+        "leverageFunging": -0.1424572095
+      },
+      "gwCostEffectiveness": 17.8
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Kebbi",
+      "label": "Nigeria (Kebbi)",
+      "outcomes": {
+        "mortalitiesUnder5": 476.7505538,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 34.88051015,
+        "mortalities15to49": 36.53178114,
+        "mortalities50to74": 64.71094051,
+        "consumptionIncrease": 14478.25327
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.503,
+        "leverageFunging": -0.1395403942
+      },
+      "gwCostEffectiveness": 31.4
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Sokoto",
+      "label": "Nigeria (Sokoto)",
+      "outcomes": {
+        "mortalitiesUnder5": 630.7510964,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 46.9808757,
+        "mortalities15to49": 53.37953878,
+        "mortalities50to74": 71.30818878,
+        "consumptionIncrease": 18625.01636
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.503,
+        "leverageFunging": -0.1330876114
+      },
+      "gwCostEffectiveness": 41.6
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Zamfara",
+      "label": "Nigeria (Zamfara)",
+      "outcomes": {
+        "mortalitiesUnder5": 500.054706,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 33.63611532,
+        "mortalities15to49": 30.20159416,
+        "mortalities50to74": 54.12341903,
+        "consumptionIncrease": 15018.41395
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.503,
+        "leverageFunging": -0.1257092344
+      },
+      "gwCostEffectiveness": 32.7
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Abia",
+      "label": "Nigeria (Abia)",
+      "outcomes": {
+        "mortalitiesUnder5": 17.53083823,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 1.08739935,
+        "mortalities15to49": 1.462697579,
+        "mortalities50to74": 2.529705829,
+        "consumptionIncrease": 2177.89511
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1194385551
+      },
+      "gwCostEffectiveness": 1.8
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Adamawa",
+      "label": "Nigeria (Adamawa)",
+      "outcomes": {
+        "mortalitiesUnder5": 60.76777727,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 3.742279323,
+        "mortalities15to49": 3.72232112,
+        "mortalities50to74": 6.499108209,
+        "consumptionIncrease": 3321.048156
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1258432392
+      },
+      "gwCostEffectiveness": 4.1
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Akwa Ibom",
+      "label": "Nigeria (Akwa Ibom)",
+      "outcomes": {
+        "mortalitiesUnder5": 15.30312277,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 1.182989113,
+        "mortalities15to49": 2.051711252,
+        "mortalities50to74": 3.574503823,
+        "consumptionIncrease": 2125.595866
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.148989557
+      },
+      "gwCostEffectiveness": 1.7
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Anambra",
+      "label": "Nigeria (Anambra)",
+      "outcomes": {
+        "mortalitiesUnder5": 19.98244808,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 1.614568503,
+        "mortalities15to49": 2.485924372,
+        "mortalities50to74": 4.0148779,
+        "consumptionIncrease": 2253.41087
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1679980899
+      },
+      "gwCostEffectiveness": 1.9
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Bayelsa",
+      "label": "Nigeria (Bayelsa)",
+      "outcomes": {
+        "mortalitiesUnder5": 34.73268053,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 2.384452706,
+        "mortalities15to49": 3.72066369,
+        "mortalities50to74": 6.264619158,
+        "consumptionIncrease": 2639.538574
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1631717893
+      },
+      "gwCostEffectiveness": 2.7
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Benue",
+      "label": "Nigeria (Benue)",
+      "outcomes": {
+        "mortalitiesUnder5": 41.61851039,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 3.528598283,
+        "mortalities15to49": 4.844297894,
+        "mortalities50to74": 7.819625988,
+        "consumptionIncrease": 2842.081962
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1540532031
+      },
+      "gwCostEffectiveness": 3.1
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Borno",
+      "label": "Nigeria (Borno)",
+      "outcomes": {
+        "mortalitiesUnder5": 80.4679524,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 7.816195108,
+        "mortalities15to49": 10.02547503,
+        "mortalities50to74": 19.11729462,
+        "consumptionIncrease": 3923.256186
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.210614518
+      },
+      "gwCostEffectiveness": 5.1
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Cross River",
+      "label": "Nigeria (Cross River)",
+      "outcomes": {
+        "mortalitiesUnder5": 10.00694018,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0.8404624619,
+        "mortalities15to49": 1.569110544,
+        "mortalities50to74": 2.798880554,
+        "consumptionIncrease": 1985.076617
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.08329190744
+      },
+      "gwCostEffectiveness": 1.5
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Delta",
+      "label": "Nigeria (Delta)",
+      "outcomes": {
+        "mortalitiesUnder5": 26.25373937,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 2.07196913,
+        "mortalities15to49": 2.987955522,
+        "mortalities50to74": 4.279432535,
+        "consumptionIncrease": 2421.273351
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1667281655
+      },
+      "gwCostEffectiveness": 2.2
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Ebonyi",
+      "label": "Nigeria (Ebonyi)",
+      "outcomes": {
+        "mortalitiesUnder5": 1.913028656,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0.1360902586,
+        "mortalities15to49": 0.1719294643,
+        "mortalities50to74": 0.2776079081,
+        "consumptionIncrease": 1765.189547
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": 0.03295256755
+      },
+      "gwCostEffectiveness": 1.1
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Edo",
+      "label": "Nigeria (Edo)",
+      "outcomes": {
+        "mortalitiesUnder5": 14.00068131,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0.8103413844,
+        "mortalities15to49": 1.382406049,
+        "mortalities50to74": 1.89440337,
+        "consumptionIncrease": 2082.84785
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1053137085
+      },
+      "gwCostEffectiveness": 1.6
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Ekiti",
+      "label": "Nigeria (Ekiti)",
+      "outcomes": {
+        "mortalitiesUnder5": 6.200453289,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0.4087612801,
+        "mortalities15to49": 0.6771852403,
+        "mortalities50to74": 1.135958444,
+        "consumptionIncrease": 1878.813179
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.05039467669
+      },
+      "gwCostEffectiveness": 1.2
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Enugu",
+      "label": "Nigeria (Enugu)",
+      "outcomes": {
+        "mortalitiesUnder5": 2.409938318,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0.2141936742,
+        "mortalities15to49": 0.3942848898,
+        "mortalities50to74": 0.6974651274,
+        "consumptionIncrease": 1779.679155
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.003218808588
+      },
+      "gwCostEffectiveness": 1.1
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "FCT",
+      "label": "Nigeria (FCT)",
+      "outcomes": {
+        "mortalitiesUnder5": 10.97768099,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0.8530685583,
+        "mortalities15to49": 1.078131224,
+        "mortalities50to74": 1.390568904,
+        "consumptionIncrease": 2009.407407
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.09476395266
+      },
+      "gwCostEffectiveness": 1.5
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Imo",
+      "label": "Nigeria (Imo)",
+      "outcomes": {
+        "mortalitiesUnder5": 5.358708088,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0.4456199719,
+        "mortalities15to49": 0.7712319421,
+        "mortalities50to74": 1.279352998,
+        "consumptionIncrease": 1859.072858
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.06466866917
+      },
+      "gwCostEffectiveness": 1.2
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Kogi",
+      "label": "Nigeria (Kogi)",
+      "outcomes": {
+        "mortalitiesUnder5": 88.52066032,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 5.898103284,
+        "mortalities15to49": 5.817157331,
+        "mortalities50to74": 8.869270125,
+        "consumptionIncrease": 4067.643454
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1579345781
+      },
+      "gwCostEffectiveness": 5.5
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Kwara",
+      "label": "Nigeria (Kwara)",
+      "outcomes": {
+        "mortalitiesUnder5": 24.73232166,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 2.132443166,
+        "mortalities15to49": 2.789361801,
+        "mortalities50to74": 5.126005991,
+        "consumptionIncrease": 2385.419012
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1592450761
+      },
+      "gwCostEffectiveness": 2.2
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Lagos",
+      "label": "Nigeria (Lagos)",
+      "outcomes": {
+        "mortalitiesUnder5": 24.79699669,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 2.717421775,
+        "mortalities15to49": 5.66332296,
+        "mortalities50to74": 8.46863448,
+        "consumptionIncrease": 2403.630532
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.2490875411
+      },
+      "gwCostEffectiveness": 2.1
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Nasarawa",
+      "label": "Nigeria (Nasarawa)",
+      "outcomes": {
+        "mortalitiesUnder5": 4.75301687,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0.5056071781,
+        "mortalities15to49": 0.7389240753,
+        "mortalities50to74": 1.104926994,
+        "consumptionIncrease": 1845.818853
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.08184307175
+      },
+      "gwCostEffectiveness": 1.1
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Niger",
+      "label": "Nigeria (Niger)",
+      "outcomes": {
+        "mortalitiesUnder5": 48.59051574,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 4.239604479,
+        "mortalities15to49": 6.156239467,
+        "mortalities50to74": 7.558840258,
+        "consumptionIncrease": 3034.451614
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1809920935
+      },
+      "gwCostEffectiveness": 3.4
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Ogun",
+      "label": "Nigeria (Ogun)",
+      "outcomes": {
+        "mortalitiesUnder5": 124.064642,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 9.778051669,
+        "mortalities15to49": 13.3073062,
+        "mortalities50to74": 20.31559009,
+        "consumptionIncrease": 5055.610391
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.353,
+        "leverageFunging": -0.1751929806
+      },
+      "gwCostEffectiveness": 7.8
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Ondo",
+      "label": "Nigeria (Ondo)",
+      "outcomes": {
+        "mortalitiesUnder5": 34.23550023,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 3.352818449,
+        "mortalities15to49": 6.023016704,
+        "mortalities50to74": 9.988222227,
+        "consumptionIncrease": 2654.763717
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.2398233697
+      },
+      "gwCostEffectiveness": 2.6
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Osun",
+      "label": "Nigeria (Osun)",
+      "outcomes": {
+        "mortalitiesUnder5": 29.79853691,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 2.633868287,
+        "mortalities15to49": 4.124125945,
+        "mortalities50to74": 7.189209591,
+        "consumptionIncrease": 2524.772121
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.2043621437
+      },
+      "gwCostEffectiveness": 2.4
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Oyo",
+      "label": "Nigeria (Oyo)",
+      "outcomes": {
+        "mortalitiesUnder5": 5.931869451,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0.5593941581,
+        "mortalities15to49": 1.023031111,
+        "mortalities50to74": 2.142327132,
+        "consumptionIncrease": 1876.458635
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1177220422
+      },
+      "gwCostEffectiveness": 1.2
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Plateau",
+      "label": "Nigeria (Plateau)",
+      "outcomes": {
+        "mortalitiesUnder5": 20.11896061,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 1.749447994,
+        "mortalities15to49": 3.326282849,
+        "mortalities50to74": 5.367150496,
+        "consumptionIncrease": 2260.612889
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.2365757329
+      },
+      "gwCostEffectiveness": 1.8
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Rivers",
+      "label": "Nigeria (Rivers)",
+      "outcomes": {
+        "mortalitiesUnder5": 26.77212071,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 2.699259929,
+        "mortalities15to49": 4.421086811,
+        "mortalities50to74": 5.38095884,
+        "consumptionIncrease": 2451.891029
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1678587734
+      },
+      "gwCostEffectiveness": 2.3
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Taraba",
+      "label": "Nigeria (Taraba)",
+      "outcomes": {
+        "mortalitiesUnder5": 13.8889932,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 0.9281429649,
+        "mortalities15to49": 1.405855655,
+        "mortalities50to74": 2.210267801,
+        "consumptionIncrease": 2083.435434
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.19,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.44,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.3096666667,
+        "leverageFunging": -0.1115651479
+      },
+      "gwCostEffectiveness": 1.6
+    },
+    {
+      "charity": "New Incentives",
+      "charityShort": "NI",
+      "country": "Nigeria",
+      "region": "Yobe",
+      "label": "Nigeria (Yobe)",
+      "outcomes": {
+        "mortalitiesUnder5": 122.2685913,
+        "mortalitiesOver5": 0,
+        "mortalities5to14": 7.801710062,
+        "mortalities15to49": 8.815184021,
+        "mortalities50to74": 10.64207544,
+        "consumptionIncrease": 4955.125008
+      },
+      "gwMoralWeights": {
+        "mortalitiesUnder5": 116.25,
+        "mortalitiesOver5": 73.1899999999999,
+        "mortalities5to14": 133.7,
+        "mortalities15to49": 103.59,
+        "mortalities50to74": 42.4399999999999,
+        "consumptionIncrease": 1.4427
+      },
+      "adjustments": {
+        "granteeLevel": -0.07,
+        "interventionLevel": 0.183,
+        "leverageFunging": -0.1473832192
+      },
+      "gwCostEffectiveness": 6.6
+    }
+  ],
+  "gwMoralWeightsDefaults": {
+    "under5Malaria": 116.25,
+    "under5VAS": 118.73,
+    "over5Malaria": 73.19,
+    "age5to14Vaccine": 133.7,
+    "age15to49Vaccine": 103.59,
+    "age50to74Vaccine": 42.44,
+    "consumptionDoubling": 1.0
+  },
+  "ageWeights": [
+    {
+      "age": "<1 week",
+      "gwWeight": 83.6,
+      "malariaPct": 0,
+      "vasPct": 0
+    },
+    {
+      "age": "1 week to 1 month",
+      "gwWeight": 84.5,
+      "malariaPct": 0.0308,
+      "vasPct": 0
+    },
+    {
+      "age": "1 month to 1 year",
+      "gwWeight": 100.7,
+      "malariaPct": 0.1912,
+      "vasPct": 0.32
+    },
+    {
+      "age": "1-4 years",
+      "gwWeight": 127.3,
+      "malariaPct": 0.3577,
+      "vasPct": 0.68
+    },
+    {
+      "age": "5-9 years",
+      "gwWeight": 134.3,
+      "malariaPct": 0.0326,
+      "vasPct": 0
+    },
+    {
+      "age": "10-14 years",
+      "gwWeight": 133.1,
+      "malariaPct": 0.0178,
+      "vasPct": 0
+    },
+    {
+      "age": "15-19 years",
+      "gwWeight": 126.3,
+      "malariaPct": 0.0215,
+      "vasPct": 0
+    },
+    {
+      "age": "20-24 years",
+      "gwWeight": 118.0,
+      "malariaPct": 0.0221,
+      "vasPct": 0
+    },
+    {
+      "age": "25-29 years",
+      "gwWeight": 112.7,
+      "malariaPct": 0.019,
+      "vasPct": 0
+    },
+    {
+      "age": "30-34 years",
+      "gwWeight": 106.3,
+      "malariaPct": 0.0189,
+      "vasPct": 0
+    },
+    {
+      "age": "35-39 years",
+      "gwWeight": 99.7,
+      "malariaPct": 0.0209,
+      "vasPct": 0
+    },
+    {
+      "age": "40-44 years",
+      "gwWeight": 86.4,
+      "malariaPct": 0.0248,
+      "vasPct": 0
+    },
+    {
+      "age": "45-49 years",
+      "gwWeight": 75.7,
+      "malariaPct": 0.0271,
+      "vasPct": 0
+    },
+    {
+      "age": "50-54 years",
+      "gwWeight": 65.2,
+      "malariaPct": 0.0329,
+      "vasPct": 0
+    },
+    {
+      "age": "55-59 years",
+      "gwWeight": 54.8,
+      "malariaPct": 0.0369,
+      "vasPct": 0
+    },
+    {
+      "age": "60-64 years",
+      "gwWeight": 39.6,
+      "malariaPct": 0.0416,
+      "vasPct": 0
+    },
+    {
+      "age": "65-69 years",
+      "gwWeight": 31.4,
+      "malariaPct": 0.0374,
+      "vasPct": 0
+    },
+    {
+      "age": "70-74 years",
+      "gwWeight": 21.2,
+      "malariaPct": 0.0407,
+      "vasPct": 0
+    },
+    {
+      "age": "75-79 yeras",
+      "gwWeight": 16.5,
+      "malariaPct": 0.0182,
+      "vasPct": 0
+    },
+    {
+      "age": "80-84 years",
+      "gwWeight": 12.4,
+      "malariaPct": 0.0065,
+      "vasPct": 0
+    },
+    {
+      "age": ">85 years",
+      "gwWeight": 12.4,
+      "malariaPct": 0.0013,
+      "vasPct": 0
+    }
+  ],
+  "giveDirectlyBenchmark": 3354.56
+}
