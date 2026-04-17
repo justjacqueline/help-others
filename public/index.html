@@ -227,20 +227,90 @@ header .subtitle { color: var(--text-dim); font-size: 12px; margin-top: 4px; }
 .tooltip-name { font-weight: 600; margin-bottom: 1px; }
 .tooltip-charity { color: var(--text-dim); font-size: 10px; }
 .tooltip-val { font-weight: 700; font-size: 13px; margin-top: 3px; }
+
+/* Moral weights UI */
+.mw-split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 800px) { .mw-split { grid-template-columns: 1fr; } }
+.mw-text { font-size: 14px; color: var(--text-dim); line-height: 1.6; margin-bottom: 6px; }
+.mw-text em { color: var(--text); font-style: normal; font-weight: 500; }
+.mw-aside { font-size: 12px; color: var(--text-dim); margin-bottom: 10px; }
+.mw-disclaimer { font-size: 12px; color: var(--text-dim); font-style: italic; margin-top: 8px; }
+.mw-interact-box {
+  background: var(--surface2); border: 1px solid var(--border); border-radius: 10px;
+  padding: 14px 18px; margin-top: 4px;
+}
+.mw-interact-title {
+  font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 8px;
+}
+.mw-section-label {
+  font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--accent); font-weight: 600; margin-top: 0; margin-bottom: 3px;
+}
+.mw-section-label + .mw-section-label, .mw-bench + .mw-section-label { margin-top: 10px; }
+.mw-bench { font-size: 14px; color: var(--text-dim); line-height: 1.6; margin-bottom: 4px; }
+.mw-inputs-row {
+  display: flex; gap: 12px; margin-top: 8px; margin-bottom: 4px;
+}
+.mw-input-col {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.mw-input-col label {
+  font-size: 10px; font-weight: 600; color: var(--text-dim);
+  text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap;
+}
+.mw-input {
+  width: 80px; padding: 5px 8px; border: 1px solid var(--border); border-radius: 4px;
+  background: var(--surface2); color: var(--text); font-size: 13px; font-weight: 600;
+  text-align: center; transition: border-color 0.2s;
+}
+.mw-input:focus { outline: none; border-color: var(--accent); }
+.mw-input::placeholder { color: transparent; }
+.mw-error {
+  font-size: 11px; color: #ef6c6c; margin-top: 4px; display: none;
+}
+.heatmap-prompt {
+  text-align: center; color: var(--text-dim); padding: 40px 20px; font-size: 12px;
+  line-height: 1.5;
+}
 </style>
 </head>
 <body>
 <div class="app">
   <header>
-    <h1>How can you help others?</h1>
-    <p class="intro">There are many ways to do good. Some programs have especially strong evidence behind them and can have a very high impact per dollar — meaning each dollar goes further in saving lives or improving well-being. This tool explores four charities recommended by GiveWell, showing how the same donation can achieve very different outcomes depending on where and how it's used (and these are already well-studied global health programs). Click any cell to explore what a $1M donation achieves.</p>
-    <p class="subtitle">Data from <a href="https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness/cost-effectiveness-models" target="_blank">GiveWell's cost-effectiveness models</a></p>
+    <h1 id="page-title">How can you help others?</h1>
+    <div id="header-gw">
+      <p class="intro">There are many ways to do good. Some programs have especially strong evidence behind them and can have a very high impact per dollar — meaning each dollar goes further in saving lives or improving well-being. This tool explores four charities recommended by GiveWell, showing how the same donation can achieve very different outcomes depending on where and how it's used (and these are already well-studied global health programs). Click any cell to explore what a $1M donation achieves.</p>
+      <p class="subtitle">Data from <a href="https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness/cost-effectiveness-models" target="_blank">GiveWell's cost-effectiveness models</a></p>
+    </div>
+    <div id="header-mine" style="display:none;">
+      <div class="mw-split">
+        <div>
+          <p class="mw-text">To compare and rank them, we need some way to put those outcomes on a common scale. That is very difficult, because it requires judging how much different outcomes matter relative to one another. These relative judgments are called <em>moral weights</em>.</p>
+          <p class="mw-text">GiveWell has put a lot of thought into how it defines and regularly updates its moral weights. This page lets you explore how different moral weights can change the ranking of options.</p>
+          <p class="mw-aside">(This idea can also be useful when comparing across causes, such as when considering how much value to assign to helping people, animals, or the environment.)</p>
+          <p class="mw-disclaimer">This is a simplified version of <a href="https://docs.google.com/spreadsheets/d/1IXCpVlrAggTdt94ETR4KbQxcKkDYC13bFgEHbBBilb8/edit?usp=sharing" target="_blank">GiveWell's interactive tool</a>.</p>
+        </div>
+        <div class="mw-interact-box">
+          <div class="mw-interact-title">Explore different moral weights</div>
+          <p class="mw-bench">Imagine someone living in extreme poverty on about $1,000 a year. You could double their everyday needs to $2,000 — for one person, for one year. How many people would need that improvement for it to feel as valuable as saving one life?</p>
+          <div class="mw-section-label">Example</div>
+          <p class="mw-bench">If you enter 100 for "Under 5," saving one child under 5 feels as valuable as giving 100 people that one-year improvement.</p>
+          <div class="mw-inputs-row">
+            <div class="mw-input-col"><label>Under 5</label><input type="number" class="mw-input" id="mw-under5" min="1" oninput="onWeightInput()"></div>
+            <div class="mw-input-col"><label>5 to 14</label><input type="number" class="mw-input" id="mw-5to14" min="1" oninput="onWeightInput()"></div>
+            <div class="mw-input-col"><label>15 to 49</label><input type="number" class="mw-input" id="mw-15to49" min="1" oninput="onWeightInput()"></div>
+            <div class="mw-input-col"><label>50 to 74</label><input type="number" class="mw-input" id="mw-50plus" min="1" oninput="onWeightInput()"></div>
+          </div>
+          <div class="mw-error" id="mw-error">Please enter a value for all four age groups to see the rankings.</div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <div class="controls">
     <div class="toggle-bar">
-      <button class="toggle-btn active" onclick="setMode('givewell')">GiveWell's Weights</button>
-      <button class="toggle-btn disabled" title="Coming soon">Your Weights</button>
+      <button class="toggle-btn active" id="btn-gw" onclick="setMode('givewell')">GiveWell's Weights</button>
+      <button class="toggle-btn" id="btn-mine" onclick="setMode('mine')">My Weights</button>
       <button class="toggle-btn disabled" title="Coming soon">Compare</button>
     </div>
   </div>
@@ -274,7 +344,7 @@ header .subtitle { color: var(--text-dim); font-size: 12px; margin-top: 4px; }
             <div class="d-title" id="d-title"></div>
             <div class="d-score">
               <span class="d-score-num" id="d-score-num"></span>
-              <span class="d-score-label">times as cost-effective<br>as cash transfers</span>
+              <span class="d-score-label" id="d-score-label">times as cost-effective<br>as cash transfers</span>
             </div>
           </div>
         </div>
@@ -378,7 +448,38 @@ const SUBREGION_COORDS = {
 };
 
 let DATA, sel = null, sortBy = 'effectiveness', geoData;
+let currentMode = 'givewell';
+let userWeights = { under5: null, age5to14: null, age15to49: null, age50plus: null };
 const CHARITIES = ['AMF','MC','HKI','NI'];
+
+const MALARIA_PCT = { age5to14: 0.0504, age15to49: 0.1543, age50plus: 0.2155 };
+const MALARIA_PCT_OVER5 = MALARIA_PCT.age5to14 + MALARIA_PCT.age15to49 + MALARIA_PCT.age50plus;
+
+function computeCE(p, w) {
+  const o = p.outcomes;
+  let val = o.mortalitiesUnder5 * w.under5;
+  if (o.mortalitiesOver5 > 0) {
+    const compositeOver5 = (MALARIA_PCT.age5to14 * w.age5to14 + MALARIA_PCT.age15to49 * w.age15to49 + MALARIA_PCT.age50plus * w.age50plus) / MALARIA_PCT_OVER5;
+    val += o.mortalitiesOver5 * compositeOver5;
+  }
+  val += o.mortalities5to14 * w.age5to14;
+  val += o.mortalities15to49 * w.age15to49;
+  val += o.mortalities50to74 * w.age50plus;
+  val += o.consumptionIncrease * p.gwMoralWeights.consumptionIncrease;
+  const a = p.adjustments;
+  val *= (1 + a.granteeLevel) * (1 + a.interventionLevel) * (1 + a.leverageFunging);
+  return Math.round(val / DATA.giveDirectlyBenchmark * 10) / 10;
+}
+
+function allWeightsEntered() {
+  return userWeights.under5 !== null && userWeights.age5to14 !== null && userWeights.age15to49 !== null && userWeights.age50plus !== null;
+}
+
+function getCE(p) {
+  if (currentMode === 'givewell') return p.gwCostEffectiveness;
+  if (!allWeightsEntered()) return null;
+  return computeCE(p, userWeights);
+}
 
 function rowKey(p) { return p.region ? p.country + '||' + p.region : p.country; }
 function isSubRegion(key) { return key.includes('||'); }
@@ -394,18 +495,35 @@ async function init() {
     geoData = topojson.feature(w, w.objects.countries);
   }
   render();
+  equalizeHeaders();
+}
+
+function equalizeHeaders() {
+  const gw = document.getElementById('header-gw');
+  const mine = document.getElementById('header-mine');
+  const savedMode = currentMode;
+  gw.style.display = '';
+  mine.style.display = '';
+  gw.style.minHeight = '';
+  mine.style.minHeight = '';
+  const h = Math.max(gw.offsetHeight, mine.offsetHeight) + 'px';
+  gw.style.minHeight = h;
+  mine.style.minHeight = h;
+  gw.style.display = savedMode === 'givewell' ? '' : 'none';
+  mine.style.display = savedMode === 'mine' ? '' : 'none';
 }
 
 function sortVal(p) {
   if (sortBy === 'lives') return p.outcomes.mortalitiesUnder5 + p.outcomes.mortalitiesOver5 + p.outcomes.mortalities5to14 + p.outcomes.mortalities15to49 + p.outcomes.mortalities50to74;
   if (sortBy === 'consumption') return p.outcomes.consumptionIncrease;
-  return p.gwCostEffectiveness;
+  return getCE(p) || 0;
 }
 
 function render() {
   renderHeatmap();
   renderTopBar();
   renderLegend();
+  if (sel) renderDetail(sel);
 }
 
 function progLabel(p) { return p.charityShort + ' ' + p.label; }
@@ -413,6 +531,7 @@ function progLabel(p) { return p.charityShort + ' ' + p.label; }
 function renderTopBar() {
   const bar = document.getElementById('top-bar');
   bar.querySelectorAll('.top-item').forEach(e => e.remove());
+  if (currentMode === 'mine' && !allWeightsEntered()) return;
   const sorted = [...DATA.programs].sort((a, b) => sortVal(b) - sortVal(a));
   const top20 = sorted.slice(0, 20);
 
@@ -424,7 +543,8 @@ function renderTopBar() {
     } else if (sortBy === 'consumption') {
       vt = Math.round(p.outcomes.consumptionIncrease).toLocaleString();
     } else {
-      vt = p.gwCostEffectiveness + 'x';
+      const ce = getCE(p);
+      vt = ce !== null ? ce + 'x' : '—';
     }
 
     const d = document.createElement('div');
@@ -439,6 +559,11 @@ function renderHeatmap() {
   const el = document.getElementById('heatmap');
   el.innerHTML = '';
 
+  if (currentMode === 'mine' && !allWeightsEntered()) {
+    el.innerHTML = '<div class="heatmap-prompt">Enter values for all four age groups above to see rankings with your moral weights.</div>';
+    return;
+  }
+
   const lookup = new Map();
   DATA.programs.forEach(p => {
     const rk = rowKey(p);
@@ -450,7 +575,7 @@ function renderHeatmap() {
   const orderedKeys = GEO_ORDER.filter(k => activeKeys.has(k));
   activeKeys.forEach(k => { if (!orderedKeys.includes(k)) orderedKeys.push(k); });
 
-  const maxVal = Math.max(...DATA.programs.map(p => p.gwCostEffectiveness));
+  const maxVal = Math.max(...DATA.programs.map(p => getCE(p) || 0));
   const colorScale = d3.scaleSequential(d3.interpolateViridis).domain([0, maxVal]);
 
   const table = document.createElement('table');
@@ -521,7 +646,7 @@ function renderHeatmap() {
       const td = document.createElement('td');
       const prog = lookup.has(key) ? lookup.get(key)[c] : null;
       if (prog) {
-        const v = prog.gwCostEffectiveness;
+        const v = getCE(prog);
         td.className = 'hm-cell' + (sel === prog ? ' selected' : '');
         td.style.background = colorScale(v);
         td.style.color = v > maxVal * 0.55 ? '#000' : '#fff';
@@ -548,6 +673,13 @@ function renderLegend() {
   const bar = document.getElementById('legend-bar');
   const stops = Array.from({length:11}, (_, i) => d3.interpolateViridis(i/10));
   bar.style.background = `linear-gradient(to right, ${stops.join(',')})`;
+  const maxVal = Math.max(...DATA.programs.map(p => getCE(p) || 0));
+  const legendContainer = bar.parentElement;
+  const spans = legendContainer.querySelectorAll('span');
+  if (spans.length >= 2) {
+    spans[0].textContent = '1x';
+    spans[1].textContent = Math.round(maxVal) + 'x';
+  }
 }
 
 function selectProg(p) {
@@ -561,7 +693,16 @@ function selectProg(p) {
 
 function renderDetail(p) {
   document.getElementById('d-title').textContent = `$1M to ${p.charity} in ${p.label}`;
-  document.getElementById('d-score-num').textContent = p.gwCostEffectiveness + '×';
+  const ce = getCE(p);
+  const scoreEl = document.getElementById('d-score-num');
+  const labelEl = document.getElementById('d-score-label');
+  if (ce !== null) {
+    scoreEl.textContent = ce + '×';
+    labelEl.innerHTML = 'times as cost-effective<br>as cash transfers';
+  } else {
+    scoreEl.textContent = '—';
+    labelEl.innerHTML = 'enter all 4 weights<br>to see updated score';
+  }
 
   const o = p.outcomes;
   const totalLives = Math.round(o.mortalitiesUnder5 + o.mortalitiesOver5 + o.mortalities5to14 + o.mortalities15to49 + o.mortalities50to74);
@@ -670,7 +811,7 @@ function showTooltip(e, p) {
   tt.innerHTML = `
     <div class="tooltip-name">${p.label}</div>
     <div class="tooltip-charity">${p.charity}</div>
-    <div class="tooltip-val">${p.gwCostEffectiveness}x cash</div>
+    <div class="tooltip-val">${getCE(p)}x cash</div>
     <div style="font-size:10px;color:var(--text-dim);margin-top:2px">${totalLives > 0 ? totalLives + ' lives saved' : 'Economic impact'} per $1M</div>`;
   tt.classList.add('show');
   positionTooltip(e);
@@ -682,8 +823,44 @@ function positionTooltip(e) {
 }
 function hideTooltip() { document.getElementById('tooltip').classList.remove('show'); }
 document.addEventListener('mousemove', e => { if (document.getElementById('tooltip').classList.contains('show')) positionTooltip(e); });
-function setMode() {}
+function setMode(mode) {
+  currentMode = mode;
+  document.getElementById('btn-gw').className = 'toggle-btn' + (mode === 'givewell' ? ' active' : '');
+  document.getElementById('btn-mine').className = 'toggle-btn' + (mode === 'mine' ? ' active' : '');
+  document.getElementById('header-gw').style.display = mode === 'givewell' ? '' : 'none';
+  document.getElementById('header-mine').style.display = mode === 'mine' ? '' : 'none';
+  document.getElementById('page-title').textContent = mode === 'mine'
+    ? 'But how are we comparing programs that help people in very different ways?'
+    : 'How can you help others?';
+
+  if (mode === 'mine') {
+    updateErrorState();
+  }
+  if (sel) {
+    document.getElementById('prompt-msg').style.display = 'none';
+    document.getElementById('detail-content').style.display = 'block';
+    renderDetail(sel);
+  }
+  render();
+}
+
+function onWeightInput() {
+  const get = id => { const v = document.getElementById(id).value; return v !== '' ? parseFloat(v) : null; };
+  userWeights.under5 = get('mw-under5');
+  userWeights.age5to14 = get('mw-5to14');
+  userWeights.age15to49 = get('mw-15to49');
+  userWeights.age50plus = get('mw-50plus');
+  updateErrorState();
+  render();
+}
+
+function updateErrorState() {
+  const anyFilled = userWeights.under5 !== null || userWeights.age5to14 !== null || userWeights.age15to49 !== null || userWeights.age50plus !== null;
+  document.getElementById('mw-error').style.display = (currentMode === 'mine' && anyFilled && !allWeightsEntered()) ? '' : 'none';
+}
+
 init();
+window.addEventListener('resize', equalizeHeaders);
 </script>
 </body>
 </html>
